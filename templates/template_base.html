@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+        <script
+            src="https://kit.fontawesome.com/d89ffbeb14.js"
+            crossorigin="anonymous"
+        ></script>
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <header>
+            <nav
+                class="navbar navbar-dark navbar-expand-md {% if request.resolver_match.url_name == 'home' %}navbar-home{% else %}navbar-other{% endif %}"
+            >
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a
+                            class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}"
+                            href="{% url 'home' %}"
+                            >Moroc</a
+                        >
+                    </div>
+                    <button
+                        class="navbar-toggler"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarText"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div id="navbarText" class="collapse navbar-collapse">
+                        <ul class="navbar-nav ms-auto">
+                            <li
+                                class="nav-item"
+                                style="
+                                    display: inline-block;
+                                    padding: 5px;
+                                    list-style: none;
+                                "
+                            >
+                                <a
+                                    class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}"
+                                    href="{% url 'home' %}"
+                                    >Home</a
+                                >
+                            </li>
+                            <li
+                                class="nav-item"
+                                style="
+                                    display: inline-block;
+                                    padding: 5px;
+                                    list-style: none;
+                                "
+                            >
+                                <a
+                                    class="nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}"
+                                    href="{% url 'contact' %}"
+                                    >Contact</a
+                                >
+                            </li>
+                            <li
+                                class="nav-item"
+                                style="
+                                    display: inline-block;
+                                    padding: 5px;
+                                    list-style: none;
+                                "
+                            >
+                                <a
+                                    class="nav-link {% if request.resolver_match.url_name == 'menus' %}active{% endif %}"
+                                    href="{% url 'menus:menus' %}"
+                                    >Menus</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        {% block content %} {% endblock %}
+
+        <footer>
+            <div class="icon text-center text-white">
+                <a href="https://www.facebook.com" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://x.com/?lang=en" target="_blank">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+            </div>
+        </footer>
+
+        <script
+            src="/docs/5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+            integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

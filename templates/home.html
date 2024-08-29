@@ -1,0 +1,33 @@
+{% extends 'template_base.html' %} {% load static %} {% block content %}
+<style>
+    html,
+    body {
+        background: url('/media/tajine.jpg') no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .navbar-home {
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100vw;
+    }
+</style>
+
+<main class="px-3 text-center text-white mt-5 h-100">
+    <h1 class="display-1">Let's enjoy.</h1>
+    <p class="lead fw-bolder">
+        We love sharing good food with great people. We bring over 30 years
+        industry experience and passion to Moroc. With a dishes that are
+        carefully designed to bring you a truly satisfying Irish food experience
+        that you are sure to remember.
+    </p>
+    <p class="lead">
+        <a href="#" class="btn btn-primary btn-lg fw-bold border-white"
+            >MAKE A RESERVATION</a
+        >
+    </p>
+</main>
+
+{% endblock %}
