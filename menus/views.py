@@ -13,7 +13,7 @@ def menu_page(request, slug):
 
 def create_menu(request):
     if request.method == "POST":
-        form = MenuForm(request.POST)
+        form = MenuForm(request.POST, request.FILES)
         if form.is_valid():  # Vérifie si le formulaire est valide
             form.save()
             return HttpResponseRedirect('/menus/')
