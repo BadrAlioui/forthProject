@@ -1,13 +1,21 @@
 {% extends 'template_base.html' %} {% load static %} {% block content %}
 
-<img
-    style="width: 100%; height: auto"
-    src="{{ menu.image.url }}"
-    alt="{{ menu.title }}"
-    class="img-fluid rounded-start"
-/>
-<h1>{{menu.title}}</h1>
-<p>{{menu.content}}</p>
-<p>{{menu.price}}</p>
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-6">
+            <img
+                src="{{ menu.image.url }}"
+                alt="{{ menu.title }}"
+                class="img-fluid rounded-start shadow"
+                style="width: 100%; height: auto"
+            />
+        </div>
+        <div class="col-md-6 d-flex flex-column justify-content-center">
+            <h1 class="display-4 text-primary">{{menu.title}}</h1>
+            <p class="lead">{{menu.content}}</p>
+            <p class="h4 text-success">{{menu.price}}</p>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
