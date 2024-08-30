@@ -1,4 +1,9 @@
 from django.apps import AppConfig
+from django.contrib import admin
+
+from .forms import Menu
+
+admin.site.register(Menu)
 
 
 class MenusConfig(AppConfig):
