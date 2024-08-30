@@ -1,5 +1,11 @@
 {% extends 'template_base.html' %} {% load static %} {% block content %}
 
+<img
+    style="width: 100%; height: auto"
+    src="{{ menu.image.url }}"
+    alt="{{ menu.title }}"
+    class="img-fluid rounded-start"
+/>
 <h1>{{menu.title}}</h1>
 <p>{{menu.content}}</p>
 <p>{{menu.price}}</p>
