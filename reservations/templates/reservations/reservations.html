@@ -1,0 +1,60 @@
+{% extends 'template_base.html' %} {% load static %} {% block content %}
+
+<form action="{% url 'reservations:create' %}" method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="firstname" class="form-label">First Name</label>
+        <input
+            type="text"
+            class="form-control"
+            id="firstname"
+            name="first_name"
+        />
+    </div>
+
+    <div class="mb-3">
+        <label for="lastname" class="form-label">Last Name</label>
+        <input
+            type="text"
+            class="form-control"
+            id="lastname"
+            name="last_name"
+        />
+    </div>
+
+    <div class="mb-3">
+        <label for="numPersons" class="form-label">Number of persons</label>
+        <input
+            type="number"
+            class="form-control"
+            id="numPersons"
+            name="number_of_persons"
+        />
+    </div>
+
+    <div class="mb-3">
+        <label for="reservationDate" class="form-label"
+            >Date of reservation</label
+        >
+        <input
+            type="date"
+            class="form-control"
+            id="reservationDate"
+            name="date_of_reservation"
+        />
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            name="emailHelp"
+        />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock %}
