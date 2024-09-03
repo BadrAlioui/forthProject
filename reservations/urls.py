@@ -10,7 +10,8 @@ urlpatterns = [
     
     
     path('', views.reservation_page, name="reservations"),
-    path('liste/', views.liste_reservation, name="liste")
+    path('liste/', views.liste_reservation, name="liste"),
+    path('edit/<list_id>', views.edit, name="edit"),
     
 
 ]

@@ -14,7 +14,7 @@ def liste_reservation(request):
         if form.is_valid():
             form.save()
             messages.success(request, "Booking has been added")
-            return redirect('reservations:liste')  # Redirect back to the same page to see the updated list
+            return redirect('home')  # Redirect back to the home page
         else:
             messages.error(request, "There was an error in your submission.")
     else:
@@ -26,6 +26,24 @@ def liste_reservation(request):
         "form": form,
         "reservations": reservations  # Pass reservations to the template
     })
+
+def edit(request, list_id):
+    if request.method == "POST":
+        current_booking = Reservation.objects.get(pk=list_id)
+        form = ReservationForm(request.POST, instance=current_booking)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Booking has been edited")
+            return redirect('reservations:liste')  # Rediriger vers la liste après modification
+        else:
+            messages.error(request, "There was an error in your submission.")
+    else:
+        get_reservation = Reservation.objects.get(pk=list_id)
+    
+    return render(request, "reservations/edit_reservation.html", {"get_reservation": get_reservation})
+
+
+
         
 
     
