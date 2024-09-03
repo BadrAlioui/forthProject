@@ -6,6 +6,7 @@ class Reservation(models.Model):
     email = models.EmailField()
     number_of_persons = models.PositiveIntegerField()
     date_booking = models.DateTimeField()
+    time = models.TimeField(default='00:00')
 
     def __str__(self):
         return f"{self.first_name} {self.last_name} has booked a table for {self.date_booking}"

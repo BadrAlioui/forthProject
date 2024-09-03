@@ -1,0 +1,36 @@
+{% extends 'template_base.html' %} {% load static %} {% block content %}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Email</th>
+            <th scope="col">Number of persons</th>
+            <th scope="col">Date of reservation</th>
+            <th scope="col">Time of reservation</th>
+            <th scope="col">Change</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for reservation in reservations %}
+        <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td>{{ reservation.first_name }}</td>
+            <td>{{ reservation.last_name }}</td>
+            <td>{{ reservation.email }}</td>
+            <td>{{ reservation.number_of_persons }}</td>
+            <td>{{ reservation.date_booking }}</td>
+            <td>{{ reservation.time }}</td>
+            <td>
+                <button type="submit" class="btn btn-primary">
+                    Delete/Edit
+                </button>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

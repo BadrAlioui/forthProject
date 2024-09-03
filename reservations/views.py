@@ -3,29 +3,29 @@ from .models import Reservation
 from .forms import ReservationForm
 from django.contrib import messages
 
-
-
-
-
 def reservation_page(request):
     reservations = Reservation.objects.all()
-    return  render(request, "reservations/reservations.html", context={'reservations':reservations})
+    return render(request, "reservations/reservations.html", context={'reservations':reservations})
 
-def create_reservation(request):
+
+def liste_reservation(request):
     if request.method == "POST":
-        form = ReservationForm
+        form = ReservationForm(request.POST)
         if form.is_valid():
             form.save()
-            
-            messages.success(request, ('Reservation has been added'))
-            return redirect('home')
+            messages.success(request, "Booking has been added")
+            return redirect('reservations:liste')  # Redirect back to the same page to see the updated list
         else:
-            messages.success(request, ('there is an error'))
-            return render(request, "reservations/create_reservations.html", {})
+            messages.error(request, "There was an error in your submission.")
     else:
-        return render(request, "reservations/create_reservations.html", {})
+        form = ReservationForm()  # If it's a GET request, instantiate a blank form
     
+    reservations = Reservation.objects.all()  # Fetch all reservations
 
+    return render(request, "reservations/liste_reservation.html", {
+        "form": form,
+        "reservations": reservations  # Pass reservations to the template
+    })
         
 
     
