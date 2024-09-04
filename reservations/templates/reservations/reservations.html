@@ -1,5 +1,6 @@
 {% extends "template_base.html" %} {% load static %} {% block content %}
 
+<a class="btn btn-primary" href="{% url 'reservations:liste' %}">Edit</a>
 <form action="{% url 'reservations:liste' %}" method="POST">
     {% csrf_token %}
     <div style="width: 50vw" class="container">
