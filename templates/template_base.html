@@ -100,15 +100,17 @@
                 </div>
             </nav>
         </header>
-        {% if messages %} {% for message in messages %}
-        <div class="alert alert-warnig alert-dismissable" role="alert">
-            <button>
-                <small><sup>x</sup></small>
-                {{message}}
-            </button>
-            {% endfor %} {% endif %}
-        </div>
-        {% block content %} {% endblock %}
+        <main>
+            {% if messages %} {% for message in messages %}
+            <div class="alert alert-warnig alert-dismissable" role="alert">
+                <button>
+                    <small><sup>x</sup></small>
+                    {{message}}
+                </button>
+                {% endfor %} {% endif %}
+            </div>
+            {% block content %} {% endblock %}
+        </main>
 
         <footer>
             <div class="icon text-center text-white">
