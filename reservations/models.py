@@ -17,6 +17,7 @@ class Reservation(models.Model):
         return f"{self.first_name} {self.last_name} has booked a table for {self.date_booking}"
 
     def clean(self):
+        super().clean()
         if self.date_booking < timezone.now():
             raise ValidationError("The date cannot be in the past!")
         if Reservation.objects.filter(date_booking=self.date_booking).count() >= 15:

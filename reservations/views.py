@@ -9,6 +9,7 @@ def reservation_page(request):
 
 
 def liste_reservation(request):
+    
     if request.method == "POST":
         form = ReservationForm(request.POST)
         if form.is_valid():
@@ -16,7 +17,7 @@ def liste_reservation(request):
             messages.success(request, "Booking has been added")
             return redirect('home')  # Redirect back to the home page
         else:
-            messages.error(request, "There was an error in your submission.")
+            messages.error(request, "There was an error in your submission or the reservation already exists.")
     else:
         form = ReservationForm()  # If it's a GET request, instantiate a blank form
     
