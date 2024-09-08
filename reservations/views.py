@@ -38,7 +38,7 @@ def edit(request, list_id):
             messages.success(request, "Booking has been edited")
             return redirect('reservations:liste')  # Redirection après modification
         else:
-            messages.error(request, "There was an error in your submission.")
+            messages.error(request, "There was an error in your submission or the reservation already exists.")
     else:
         # Ici, le formulaire est prérempli avec les données existantes de la réservation
         form = ReservationForm(instance=get_reservation)
