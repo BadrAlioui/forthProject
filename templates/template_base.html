@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -13,8 +14,8 @@
         <title>{% block title %}{% endblock %}</title>
     </head>
     <body>
-        <header>
-            <nav class="navbar navbar-dark navbar-expand-md {% if request.resolver_match.url_name == 'home' %}navbar-home{% else %}navbar-other{% endif %}">
+        <header >
+            <nav class="navbar  navbar-dark navbar-expand-md {% if request.resolver_match.url_name == 'home' %}navbar-home{% else %}navbar-other{% endif %}" >
                 <div class="container-fluid">
                   <a class="navbar-brand" href="{% url 'home' %}">Moroc</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,6 +44,12 @@
                   ">
                         <a class="nav-link {% if request.resolver_match.url_name == 'menus' %}active{% endif %}" href="{% url 'menus:menus' %}">Menus</a>
                       </li>
+
+                    </li>
+                    
+
+
+
                       <li class="nav-item dropdown " style="
                       display: inline-block;
                       padding: 5px;
