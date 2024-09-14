@@ -5,7 +5,7 @@ from django.core.mail import send_mail
 
 
 def home_page(request):
-    return render(request, 'home.html')
+    return render(request, 'index.html')
 
 
 def contact_page(request):
