@@ -2,6 +2,9 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import Reservation
 from .forms import ReservationForm
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+
+
 
 def reservation_page(request):
     reservations = Reservation.objects.all()
@@ -28,6 +31,7 @@ def liste_reservation(request):
         "reservations": reservations  # Pass reservations to the template
     })
 
+@login_required(login_url="/accounts/login/")
 def edit(request, list_id):
     # Obtenez la réservation à modifier
     get_reservation = get_object_or_404(Reservation, pk=list_id)
@@ -49,7 +53,7 @@ def edit(request, list_id):
         "form": form
     })
 
-
+@login_required(login_url="/accounts/login/")
 def delete_reservation(request):
     if request.method == "POST":
         first_name = request.POST.get('first_name')
