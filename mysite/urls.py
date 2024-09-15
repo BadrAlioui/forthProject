@@ -12,4 +12,7 @@ urlpatterns = [
     path('menus/', include('menus.urls')),
     path("accounts/", include("allauth.urls")),
     path('reservations/', include('reservations.urls')),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] 
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
