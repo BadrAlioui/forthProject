@@ -1,12 +1,97 @@
 {% extends "template_base.html" %} {% load static %} {% block content %}
 
+<style>
+    body {
+        background: url('/media/harira.jpg') no-repeat center fixed;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    h1 {
+        color: #fff;
+        
+        margin-top: 10px;
+        font-size: 3em;
+        font-weight: bold;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .form1 {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 30px;
+        
+        border-radius: 15px;
+        max-width: 600px;
+        margin: 0 auto;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .form2 {
+        position: relative;
+        left: 50%;
+        bottom: 15.25%;
+    }
+
+    footer{
+        margin-top: 0;
+    }
+
+   
+
+    @media screen and (max-width: 736px){
+        .form2 {
+            position: relative;
+            left: 50%;
+            bottom: 14%;
+        }
+    }
+
+    @media screen and (max-width: 664px){
+
+        h1{font-size: 2.5em;
+        margin-left: 0;}
+        .form2 {
+            position: relative;
+            left: 50%;
+            bottom: 13.53%;
+        }
+    }
+
+    @media screen and (max-width: 596px){
+        .form2 {
+            position: relative;
+            left: 50%;
+            bottom: 12.7%;
+        }
+    }
+
+    @media screen and (max-width: 532px){
+        .form2 {
+            position: relative;
+            left: 50%;
+            bottom: 12%;
+        }
+    }
+
+    @media screen and (max-width: 372px){
+        .form2 {
+            margin-top: 5px;
+            position: relative;
+            left: 28%;
+            bottom: 7%;
+        }
+    }
+
+</style>
 
 
-<form action="{% url 'reservations:edit' get_reservation.id %}" method="POST">
+<form class="form1 mt-5"   action="{% url 'reservations:edit' get_reservation.id %}" method="POST">
     {% csrf_token %}
 
     <div style="width: 50vw" class="container">
-        <h1 class="text-center mt-3">Reservations</h1>
+        <h1 class="mx-auto mt-2">Reservations</h1>
 
         <!-- Affichage des erreurs -->
         {% if form.errors %}
@@ -57,7 +142,7 @@
     </div>
 </form>
 
-<form action="{% url 'reservations:delete' %}" method="POST">
+<form class="form2"   action="{% url 'reservations:delete' %}" method="POST">
     {% csrf_token %}
     <input
         type="hidden"
