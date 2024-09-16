@@ -7,7 +7,9 @@ body {
     width: 100%;
 }
 
-
+main{
+    height: 100%;
+}
 
 footer {
     padding: 20px;
