@@ -3,6 +3,8 @@ from .models import Reservation
 from .forms import ReservationForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.urls import re_path
+from django.views.static import serve
 
 
 
