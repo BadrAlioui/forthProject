@@ -22,6 +22,7 @@ ALLOWED_HOSTS = ['your-heroku-app.herokuapp.com', 'localhost']
 # Application definition
 
 INSTALLED_APPS = [
+    'corsheaders',
     'widget_tweaks',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -44,8 +45,9 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    "whitenoise.middleware.WhiteNoiseMiddleware",
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -54,6 +56,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'allauth.account.middleware.AccountMiddleware',
 ]
+
 
 ROOT_URLCONF = 'mysite.urls'
 
@@ -154,6 +157,8 @@ DEFAULT_FROM_EMAIL = 'studentinstitute2024@gmail.com'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CORS_ALLOW_ALL_ORIGINS = True
 
 
 django_heroku.settings(locals())
