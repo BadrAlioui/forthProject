@@ -44,7 +44,7 @@ Here are some screenshots of the application:
 ![Reservation Page](https://github.com/BadrAlioui/forthProject/blob/master/media/reservation_page.png?raw=true)
 
 ### Reservation List
-![Reservation List](path_to_your_reservation_list_screenshot)
+![Reservation List](https://github.com/BadrAlioui/forthProject/blob/master/media/reservation_list_page.png?raw=true)
 
 ### Contact Page
 ![Contact Page](path_to_your_contact_page_screenshot)
