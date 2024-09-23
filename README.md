@@ -38,7 +38,7 @@ This project uses basic web technologies:
 Here are some screenshots of the application:
 
 ### Home Page
-![Home Page](path_to_your_home_page_screenshot)
+![Home Page](/forthProject/media/home-presentation.png)
 
 ### Reservation Page
 ![Reservation Page](path_to_your_reservation_page_screenshot)
