@@ -47,7 +47,7 @@ Here are some screenshots of the application:
 ![Reservation List](https://github.com/BadrAlioui/forthProject/blob/master/media/reservation_list_page.png?raw=true)
 
 ### Contact Page
-![Contact Page](path_to_your_contact_page_screenshot)
+![Contact Page](https://github.com/BadrAlioui/forthProject/blob/master/media/contact_presentation_page.png?raw=true)
 
 *(Replace `path_to_your_*_screenshot` with the actual paths where you saved your images.)*
 
