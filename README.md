@@ -62,6 +62,15 @@ Here are some screenshots of the application:
 ## Accessibility
 We are committed to ensuring accessibility for all users. Our platform has been tested to provide an inclusive user experience.
 
+**Accessibility Mobile**
+
+![Accessibility Mobile](https://github.com/BadrAlioui/forthProject/blob/master/media/mobile_accessibility.png?raw=true)
+
+**Accessibility Mobile**
+
+![Accessibility Desktop](https://github.com/BadrAlioui/forthProject/blob/master/media/desktop_accessibility.png?raw=true)
+
+
 ## Unfixed Bugs
 Currently, there are no known bugs in the project.
 
