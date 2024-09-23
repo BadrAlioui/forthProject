@@ -38,7 +38,11 @@ This project uses basic web technologies:
 Here are some screenshots of the application:
 
 ### Home Page
+<<<<<<< HEAD
 ![Home Page](https://github.com/BadrAlioui/forthProject/blob/master/media/home-presentation.png?raw=true)
+=======
+![Home Page](https://github.com/BadrAlioui/forthProject/blob/master/media/home-presentation.png?raw=true))
+>>>>>>> 8c7906baa35f8eb25e21bc0db605a3f19bec6cca
 
 ### Reservation Page
 ![Reservation Page](path_to_your_reservation_page_screenshot)
