@@ -8,6 +8,7 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 
 
 // scripts.js
+// https://www.geeksforgeeks.org/create-a-contact-form-using-html-css-javascript/
 
 document.getElementById('contactForm').addEventListener('submit', function (event) {
     event.preventDefault();
@@ -51,3 +52,7 @@ document.getElementById('contactForm').addEventListener('submit', function (even
 
     
 });
+
+
+
+
