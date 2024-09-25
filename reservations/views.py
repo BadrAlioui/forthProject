@@ -35,7 +35,7 @@ def liste_reservation(request):
 
 @login_required(login_url="/accounts/login/")
 def edit(request, list_id):
-    # Obtenez la réservation à modifier
+    # Obtain the reservation to be edited
     get_reservation = get_object_or_404(Reservation, pk=list_id)
     
     if request.method == "POST":
@@ -43,11 +43,10 @@ def edit(request, list_id):
         if form.is_valid():
             form.save()
             messages.success(request, "Booking has been edited")
-            return redirect('reservations:liste')  # Redirection après modification
+            return redirect('reservations:liste')  # lead to the list of reservations after editing
         else:
             messages.error(request, "There was an error in your submission or the reservation already exists.")
     else:
-        # Ici, le formulaire est prérempli avec les données existantes de la réservation
         form = ReservationForm(instance=get_reservation)
     
     return render(request, "reservations/edit_reservation.html", {
@@ -61,14 +60,14 @@ def delete_reservation(request):
         first_name = request.POST.get('first_name')
         last_name = request.POST.get('last_name')
         
-        # Chercher la réservation correspondante
+        # research reservation
         reservation = get_object_or_404(Reservation, first_name=first_name, last_name=last_name)
         
-        # Supprimer la réservation
+        # delelte reservation
         reservation.delete()
         messages.success(request, "Reservation deleted successfully")
-        return redirect("reservations:liste")  # Redirection après suppression
-    return redirect("reservations:liste")  # Redirection si accès direct par GET
+        return redirect("reservations:liste")  # lead to the list of reservations
+    return redirect("reservations:liste")  # lead to the list of reservations
 
 
 

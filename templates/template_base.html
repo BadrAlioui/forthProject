@@ -53,7 +53,7 @@
                         <a class="nav-link {% if request.resolver_match.url_name == 'menus' %}active{% endif %}" href="{% url 'menus:menus' %}">Menus</a>
                       </li>
 
-                    </li>
+                    
                     
 
 
@@ -104,7 +104,7 @@ list-style: none;
         </header>
         <main>
             {% if messages %} {% for message in messages %}
-            <div class="alert alert-warnig alert-dismissable" role="alert">
+            <div class="alert alert-warning alert-dismissable" role="alert">
                 <button>
                     <small><sup>x</sup></small>
                     {{message}}
