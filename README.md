@@ -63,9 +63,17 @@ Here are some screenshots of the application:
 
 ![css validator](https://github.com/BadrAlioui/forthProject/blob/master/media/css_validator.png?raw=true)
 
+-home page:
+
+![css home](https://github.com/BadrAlioui/forthProject/blob/master/media/home_css_validator.png?raw=true)
+
 -contact page:
 
-![css contact]()
+![css contact](https://github.com/BadrAlioui/forthProject/blob/master/media/contact_css_validator.png?raw=true)
+
+-reservation page:
+
+![css reservation](https://github.com/BadrAlioui/forthProject/blob/master/media/reservation_css_validator.png?raw=true)
 
 ## Accessibility
 We are committed to ensuring accessibility for all users. Our platform has been tested to provide an inclusive user experience.
