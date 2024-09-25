@@ -97,9 +97,17 @@ The application has been tested on various browsers, including Firefox, Chrome, 
 - **Online Payment**: Not available for now
 - **Comments or Contact**: Add a feature contact about restaurant.
 
-## Credits
-### Imagery
-All images used on the site are from free sources like [Pexels](https://www.pexels.com/).
+## References
+- Images sourced from [Pexels](https://www.pexels.com/).
+- Bootstrap for styling: [Bootstrap Documentation](https://getbootstrap.com/).
+- Django documentation: [Django Framework](https://www.djangoproject.com/).
+
+## Inspiration and Learning Resources
+- **Modification and Deletion Features**: Inspired by the course [Push Django & Python Apps to Heroku](https://www.udemy.com/course/push-django-python-apps-to-heroku/) on Udemy.
+- **Adding Menus**: Learned from the course [Python Django - Full Stack Web Developer Training](https://www.udemy.com/course/python-django-formation-developpeur-web-full-stack/) on Udemy.
+- **Tooltips and Other Bootstrap Features**: Inspired by the course [Bootstrap 5 - The Ultimate Training](https://www.udemy.com/course/bootstrap-5-la-formation-ultime/) on Udemy.
+- **Contact Page Creation**: Based on the tutorial from [GeeksforGeeks](https://www.geeksforgeeks.org/create-a-contact-form-using-html-css-javascript/).
+
 
 ## Acknowledgements
 - My mentor for their constant support and feedback.
