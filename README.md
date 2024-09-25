@@ -57,9 +57,15 @@ Here are some screenshots of the application:
 - No errors or warnings on all pages.
 
 **CSS Validation**:
-- All CSS files passed without errors.
+- All CSS files passed without errors:
+
+- css validator in style.css:
 
 ![css validator](https://github.com/BadrAlioui/forthProject/blob/master/media/css_validator.png?raw=true)
+
+-contact page:
+
+![css contact]()
 
 ## Accessibility
 We are committed to ensuring accessibility for all users. Our platform has been tested to provide an inclusive user experience.
