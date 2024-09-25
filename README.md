@@ -29,8 +29,8 @@ This project uses basic web technologies:
 - Python 3.x and Django installed.
 
 ### Installation
-1. Clone the repository: `git clone [repository_URL]`
-2. Navigate to the project folder: `cd project_folder_name`
+1. Clone the repository: `git clone [https://github.com/BadrAlioui/forthProject]`
+2. Navigate to the project folder: `cd forthProject`
 3. Install dependencies: `pip install -r requirements.txt`
 4. Start the Django server: `python manage.py runserver`
 
@@ -58,6 +58,8 @@ Here are some screenshots of the application:
 
 **CSS Validation**:
 - All CSS files passed without errors.
+
+![css validator](https://github.com/BadrAlioui/forthProject/blob/master/media/css_validator.png?raw=true)
 
 ## Accessibility
 We are committed to ensuring accessibility for all users. Our platform has been tested to provide an inclusive user experience.
@@ -94,7 +96,7 @@ The application has been tested on various browsers, including Firefox, Chrome, 
 
 ## Future Enhancements
 - **Filtering Feature**: Possibility to add menus.
-- **Online Payment**: Not available for now
+- **Online Payment**: Not available for now, but could be added later.
 - **Comments or Contact**: Add a feature contact about restaurant.
 
 ## References
