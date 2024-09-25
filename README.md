@@ -86,20 +86,20 @@ You can access the live version here: [Restaurant Booking System](https://quiet-
 | User Story | Testing |
 | --- | --- |
 | As a user, I want to easily book a table | The user can access the reservation page from the home page and fill out the form. |
-| As a user, I want to receive a confirmation email | After submitting the form, the user receives a confirmation email. |
+| As a user, I want to receive a confirmation message | After submitting the form, the user receives a confirmation message. |
 | As a user, I want to cancel my reservation | The user can access their account and cancel or change their reservations. |
 
 ### Browser Compatibility
 The application has been tested on various browsers, including Firefox, Chrome, and Microsoft Edge, to ensure a consistent user experience.
 
 ## Future Enhancements
-- **Filtering Feature**: Add options to filter restaurants by cuisine type or location.
-- **Online Payment**: Allow users to pay for their reservation directly through the app.
-- **Reviews and Comments**: Add a feature for users to leave reviews about restaurants.
+- **Filtering Feature**: Possibility to add menus.
+- **Online Payment**: Not available for now
+- **Comments or Contact**: Add a feature contact about restaurant.
 
 ## Credits
 ### Imagery
-All images used on the site are from free sources like [Unsplash](https://unsplash.com/) and [Pexels](https://www.pexels.com/).
+All images used on the site are from free sources like [Pexels](https://www.pexels.com/).
 
 ## Acknowledgements
 - My mentor for their constant support and feedback.
