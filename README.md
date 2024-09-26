@@ -12,7 +12,7 @@ The Restaurant Booking System is a web application that allows users to easily b
 ## Built With
 This project uses basic web technologies:
 - **HTML5**: For structuring content.
-- **CSS3**: For styling and responsive design.
+- **CSS3/Bootstrap**: For styling and responsive design.
 - **Django**: For back-end and data management.
 - **JavaScript**: For interactive features.
 
