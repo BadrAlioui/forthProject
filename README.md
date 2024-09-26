@@ -49,7 +49,6 @@ Here are some screenshots of the application:
 ### Contact Page
 ![Contact Page](https://github.com/BadrAlioui/forthProject/blob/master/media/contact_presentation_page.png?raw=true)
 
-*(Replace `path_to_your_*_screenshot` with the actual paths where you saved your images.)*
 
 ## Validator Testing
 
@@ -128,3 +127,4 @@ The application has been tested on various browsers, including Firefox, Chrome, 
 ## Acknowledgements
 - My Mentor Rahul for his ongoing support and feedback
 - The Code Institute's Tutor Support with Marco
+cd
