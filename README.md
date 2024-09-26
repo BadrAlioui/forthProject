@@ -18,7 +18,7 @@ This project uses basic web technologies:
 
 ## Key Features
 - **Easy Reservations**: Users can select the date, time, and number of people for their booking.
-- **Email Confirmation**: Users receive a confirmation email after making a reservation.
+- **Message Confirmation**: Users receive a confirmation message after making a reservation.
 - **Reservation Management**: Users can cancel or change their reservations easily.
 - **Responsive Design**: Ensures a smooth experience on mobile and desktop.
 
