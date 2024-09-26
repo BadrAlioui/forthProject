@@ -127,4 +127,3 @@ The application has been tested on various browsers, including Firefox, Chrome, 
 ## Acknowledgements
 - My Mentor Rahul for his ongoing support and feedback
 - The Code Institute's Tutor Support with Marco
-cd
