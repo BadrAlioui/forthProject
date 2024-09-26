@@ -126,5 +126,5 @@ The application has been tested on various browsers, including Firefox, Chrome, 
 
 
 ## Acknowledgements
-- My mentor for their constant support and feedback.
-- The development team for their valuable help.
+- My Mentor Rahul for his ongoing support and feedback
+- The Code Institute's Tutor Support with Marco
