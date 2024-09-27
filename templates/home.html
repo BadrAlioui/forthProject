@@ -14,24 +14,48 @@
         font-family: 'Dancing Script', cursive;
     }
 
+#container{
+    margin-left: 0px;
+    
+}
+
+    .btn-primary {
+        padding: 15px 30px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        border-radius: 50px;
+        background-color: #ffc107; 
+        color: #333;
+        border: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: #e0a800;
+        color: #fff;
+    }
+
 </style>
 
-<main class="px-3 text-start ms-5 mt-5 h-100">
-    <h1 class="display-3 text-white">Let's <span>enjoy</span>.</h1>
-    <p class="lead fw-bolder w-25 text-white">
-        We bring over 30 years industry experience and passion to Moroc. With
-        dishes that are carefully designed to bring you a truly satisfying
-        Moroccan food experience that you are sure to remember.
-    </p>
-    <p class="lead">
-        <a
-            href="{% url 'reservations:reservations' %}"
-            class="fs-5 fw-bold text-white btn btn-primary"
-        >
+<main class="px-3 ms-5 mt-5 h-100">
+    <div id="container">
+        <h1 class="display-3 text-white">Let's <span>enjoy</span>.</h1>
+        <p class="lead fw-bolder w-25 text-white text-center">
+            We bring over 30 years industry experience and passion to Moroc. With
+            dishes that are carefully designed to bring you a truly satisfying
+            Moroccan food experience that you are sure to remember.
+        </p>
+        <p class="lead">
+            <a
+                href="{% url 'reservations:reservations' %}"
+                class="fs-5 fw-bold text-white btn btn-primary"
+            >
 
-            MAKE A RESERVATION
-        </a>
-    </p>
+                MAKE A RESERVATION
+            </a>
+        </p>
+    </div>
+    
 </main>
 
 {% endblock %}
