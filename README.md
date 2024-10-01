@@ -100,51 +100,49 @@ You can access the live version here: [Restaurant Booking System](https://quiet-
 
 ## User Stories
 
-### As a User, I Want to Make a Reservation
-I can access the reservation page from the home page. The reservation form allows me to enter my details such as first name, last name, email, number of persons, date, and time. Upon submitting the form, I receive a confirmation message, indicating that my reservation has been successfully recorded.
+1. **As a user, I want to easily book a table** so that I can reserve a spot for my desired date and time.
 
-### As a User, I Want to View My Reservations
-I can view a list of all my reservations by navigating to the reservation management page. Each entry displays essential details such as the reservation date, time, and number of persons. This feature allows me to keep track of my bookings easily.
+2. **As a user, I want to provide my personal details** such as my name, email, and number of persons when making a reservation.
 
-### As a User, I Want to Edit My Reservation
-If I need to change any details regarding my reservation, I can click on the "Edit" button next to my reservation entry. This takes me to a pre-filled form where I can update my information. Once I submit the changes, I receive a success message confirming that my reservation has been updated.
+3. **As a user, I want to select the date and time for my reservation** so that I can plan my visit accordingly.
 
-### As a User, I Want to Delete My Reservation
-If my plans change, I can delete my reservation directly from the reservation management page. After confirming the deletion in a pop-up modal, the reservation is removed from the system, and I receive a notification indicating that my reservation has been successfully deleted.
+4. **As a user, I want to receive a confirmation message after submitting the reservation form** so that I know my booking was successful.
 
-### As a User, I Want to Contact the Restaurant
-The contact page provides a form where I can send messages or inquiries to the restaurant. After filling out my name, email, and message, I can submit the form. I receive a confirmation message indicating that my message has been sent successfully.
+5. **As a user, I want to be informed if the restaurant is fully booked on my selected date** to avoid confusion about my reservation.
 
-### As a User, I Want to Browse the Menu
-I can view the menu items by navigating to the menus page. Each menu item includes an image, title, description, and price, giving me an overview of what the restaurant offers. This feature allows me to decide what I would like to order before making a reservation.
+6. **As a user, I want to edit my reservation details** if my plans change, while I am still logged in.
 
-### As a User, I Want a Mobile-Friendly Experience
-When accessing the website on my mobile device, the layout adjusts seamlessly, ensuring that I can easily navigate through the pages and fill out forms without any hassle. The responsive design enhances my overall experience, making it convenient to use on various devices.
+7. **As a user, I want to cancel my reservation** if I can no longer make it, but only while I am logged in.
 
-### As a User, I Want to Ensure My Data is Secure
-I trust that my personal information and reservations are securely handled. The application has measures in place to protect my data, and I can manage my reservations safely through the user interface.
+8. **As a user, I want to view a list of all my past reservations** so that I can keep track of my dining history.
 
-### As a User, I Want Easy Navigation
-The navigation bar at the top of the page helps me quickly access different sections of the website, such as home, menus, reservations, and contact. This feature simplifies my journey through the application.
+9. **As a user, I want to access the menu page** to see the available dishes before making a reservation.
 
-### As a User, I Want to Receive Error Messages
-If I make a mistake while filling out a form, I want clear error messages to help me correct the issue. This ensures that I can successfully complete my tasks without frustration.
+10. **As a user, I want to view the details of a specific menu item** so that I can learn more about what I will be ordering.
 
-### As a User, I Want to Access the Application Anytime
-The application is hosted online, allowing me to access it at any time from anywhere, as long as I have an internet connection. This accessibility makes it convenient for me to make reservations whenever needed.
+11. **As a user, I want to create new menu items as an admin** to keep the restaurant's offerings up-to-date.
 
-### As a User, I Want to See Validation Messages
-When I submit forms, I want to see validation messages confirming my inputs are correct or alerting me to any errors. This helps ensure that my information is accurately captured.
+12. **As a user, I want to see images of the menu items** so that I can make my choices based on the presentation of the food.
 
----
+13. **As a user, I want to have a contact form** so that I can reach out to the restaurant for inquiries or feedback.
 
-## Unfixed Bugs
-During development, I encountered a few bugs:
+14. **As a user, I want to access the home page easily** so that I can quickly navigate to other parts of the website.
 
-1. **Image Loading Issues**: Some images did not load correctly when accessed through external links due to CORS restrictions.
-2. **Form Submission Errors**: Occasionally, users received error messages even when valid inputs were provided, which required thorough validation checks.
-3. **Responsiveness on Older Browsers**: The website sometimes did not display correctly on older browser versions, affecting user experience.
+15. **As a user, I want to receive error messages** if I make a mistake in the reservation form to correct my input.
 
+16. **As a user, I want to have a visually appealing interface** that makes my experience enjoyable while browsing the website.
+
+17. **As a user, I want the website to work well on mobile devices** so that I can make reservations on the go.
+
+18. **As a user, I want to easily find the option to log in or sign up** so that I can manage my reservations.
+
+19. **As a user, I want the website to load quickly** so that I do not have to wait long to see the content.
+
+20. **As a user, I want the navigation bar to be clear and organized** so that I can find what I am looking for without confusion.
+
+
+## Bug Fixes
+1. **Image Loading Issues**: I modified the path to access images in the simplest way possible by using a relative or absolute path. This change resolved issues with images not loading correctly.
 
 ### Browser Compatibility
 The application has been tested on various browsers, including Firefox, Chrome, and Microsoft Edge, to ensure a consistent user experience.
