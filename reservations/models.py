@@ -18,6 +18,7 @@ class Reservation(models.Model):
     def __str__(self):
         return f"{self.first_name} {self.last_name.lower()} has booked a table for {self.date_booking}"
 
+    # https://stackoverflow.com/questions/12278753/clean-method-in-model-and-field-validation
     def clean(self):
         self.first_name = self.first_name.lower()
         self.last_name = self.last_name.lower()

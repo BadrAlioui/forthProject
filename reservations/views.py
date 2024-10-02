@@ -24,7 +24,10 @@ def liste_reservation(request):
             messages.success(request, "Booking has been added")
             return redirect('home')  # Redirect back to the home page
         else:
-            messages.error(request, "There was an error in your submission or the reservation already exists.")
+            # messages.error(request, "There was an error in your submission or the reservation already exists.")
+            for fields, errors in form.errors.items():
+                for error in errors:
+                    messages.error(request, error)
     else:
         form = ReservationForm()  # If it's a GET request, instantiate a blank form
     
