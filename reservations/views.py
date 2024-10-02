@@ -25,7 +25,7 @@ def liste_reservation(request):
             return redirect('home')  # Redirect back to the home page
         else:
             # messages.error(request, "There was an error in your submission or the reservation already exists.")
-            for fields, errors in form.errors.items():
+            for _ , errors in form.errors.items():
                 for error in errors:
                     messages.error(request, error)
     else:
