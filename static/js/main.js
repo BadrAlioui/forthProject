@@ -1,11 +1,11 @@
+// Indiquer au validateur d'utiliser ES6
+/* jshint esversion: 6 */
+
 // tooltip
-
-
-var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new bootstrap.Tooltip(tooltipTriggerEl)
-})
-
+  return new bootstrap.Tooltip(tooltipTriggerEl);
+});
 
 // scripts.js
 // https://www.geeksforgeeks.org/create-a-contact-form-using-html-css-javascript/
@@ -20,8 +20,7 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     // Get form values
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const message = document.getElementById('message').value.trim();
+    
 
     // Validation flags
     let isValid = true;
@@ -42,17 +41,4 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     }
 
     
-
-    // Message validation
-    if (message === '') {
-        document.getElementById('messageError').textContent = 'Message is required';
-        document.getElementById('messageError').style.display = 'block';
-        isValid = false;
-    }
-
-    
 });
-
-
-
-
