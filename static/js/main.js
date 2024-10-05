@@ -20,7 +20,7 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     // Get form values
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
-    
+    const message = document.getElementById('message').value.trim();
 
     // Validation flags
     let isValid = true;
@@ -40,5 +40,10 @@ document.getElementById('contactForm').addEventListener('submit', function (even
         isValid = false;
     }
 
-    
+    // Message validation
+    if (message === '') {
+        document.getElementById('messageError').textContent = 'Message is required';
+        document.getElementById('messageError').style.display = 'block';
+        isValid = false;
+    }
 });
