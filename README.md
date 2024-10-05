@@ -54,6 +54,37 @@ Here are some screenshots of the application:
 **HTML Validation**:
 - No errors or warnings on all pages.
 
+-page signup:
+
+![signup validator](https://github.com/BadrAlioui/forthProject/blob/master/media/signup_validator.png?raw=true)
+
+-page reservation:
+
+![reservation validator](https://github.com/BadrAlioui/forthProject/blob/master/media/reservation_validator.png?raw=true)
+
+-page list of reservation:
+
+![reservation_list validator](https://github.com/BadrAlioui/forthProject/blob/master/media/reservation_list_validator.png?raw=true)
+
+-menu page:
+
+![menu_page validator](https://github.com/BadrAlioui/forthProject/blob/master/media/menu_page_validator.png?raw=true)
+
+-login page:
+
+![login validator](https://github.com/BadrAlioui/forthProject/blob/master/media/login_page_validator.png?raw=true)
+
+-home page:
+
+![home_page validator](https://github.com/BadrAlioui/forthProject/blob/master/media/home_page_validator.png?raw=true)
+
+-Edit reservation:
+
+![edir_reservation validator](https://github.com/BadrAlioui/forthProject/blob/master/media/edit_reservation_validator.png?raw=true)
+
+-contact page:
+
+![contact validator](https://github.com/BadrAlioui/forthProject/blob/master/media/contact_page_validator.png?raw=true)
 **CSS Validation**:
 - All CSS files passed without errors:
 
@@ -61,20 +92,10 @@ Here are some screenshots of the application:
 
 ![css validator](https://github.com/BadrAlioui/forthProject/blob/master/media/css_validator.png?raw=true)
 
-- home page:
-
-![css home](https://github.com/BadrAlioui/forthProject/blob/master/media/home_css_validator.png?raw=true)
-
-- contact page:
-
-![css contact](https://github.com/BadrAlioui/forthProject/blob/master/media/contact_css_validator.png?raw=true)
-
-- reservation page:
-
-![css reservation](https://github.com/BadrAlioui/forthProject/blob/master/media/reservation_css_validator.png?raw=true)
 
 **JavaScript Validation**:
-To be added.
+
+![Javascript validator](https://github.com/BadrAlioui/forthProject/blob/master/media/javascript_validator.png?raw=true)
 
 **Python Validation**:
 To be added.
