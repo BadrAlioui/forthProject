@@ -1,75 +1,26 @@
 {% extends 'template_base.html' %}
-{% load static %}
 {% load widget_tweaks %}
 {% block content %}
-
-<style>
-    body {
-        background: url('/media/harira.jpg') no-repeat center fixed;
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    h1 {
-        color: #fff;
-        text-align: center;
-        margin-top: 10px;
-        font-size: 3em;
-        font-weight: bold;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-        font-family: 'Dancing Script', cursive;
-    }
-    
-    
-
-    form {
-        background-color: rgba(255, 255, 255, 0.8);
-        padding: 30px;
-        border-radius: 15px;
-        max-width: 600px;
-        margin: 0 auto;
-
-        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-    }
-
-    .form-group {
-        margin-bottom: 15px;
-    }
-
-    .form-group label {
-        display: block;
-        font-weight: bold;
-        margin-bottom: 5px;
-    }
-
-    .text-area {
-        width: 100%;
-        height: auto;
-    }
-</style>
-<h1>Contact Us</h1>
-<form action="{% url 'contact' %}" method="POST">
-    {% csrf_token %}
-    <div class="form-group">
-        <label for="id_name">Name:</label>
-        {{ form.name }}
-        <span class="error-message" id="nameError"></span>
-    </div>
-    <div class="form-group">
-        <label for="id_email">Email:</label>
-        {{ form.email }}
-        <span class="error-message" id="emailError"></span>
-    </div>
-    <div class="form-group">
-        <!-- https://stackoverflow.com/questions/51112547/invalid-filter-add-class-using-django-widget-tweaks -->
-        {% comment %} https://pypi.org/project/django-widget-tweaks/ {% endcomment %}
-        <label for="id_message">Message:</label>
-        {{ form.message|add_class:"text-area" }}
-        <span class="error-message" id="messageError"></span>
-    </div>
-    <button type="submit" class="btn btn-primary btn-lg w-100">Submit</button>
-</form>
-
+<div class="contact-page">
+    <h1>Contact Us</h1>
+    <form action="{% url 'contact' %}" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="id_name">Name:</label>
+            {{ form.name }}
+            <span class="error-message" id="nameError"></span>
+        </div>
+        <div class="form-group">
+            <label for="id_email">Email:</label>
+            {{ form.email }}
+            <span class="error-message" id="emailError"></span>
+        </div>
+        <div class="form-group">
+            <label for="id_message">Message:</label>
+            {{ form.message|add_class:"text-area" }}
+            <span class="error-message" id="messageError"></span>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg w-100">Submit</button>
+    </form>
+</div>
 {% endblock %}

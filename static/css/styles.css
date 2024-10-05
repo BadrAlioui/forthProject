@@ -1,14 +1,41 @@
-html,
-body {
+/* Style global */
+html, body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
     height: 100vh;
     width: 100vw;
+    background-image: url('/media/home_page.jpg'); /* Même image de fond pour toutes les pages */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 150%; /* Applique le "dézoom" de l'image */
+    background-position: center;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+
 }
+
+main {
+    flex-grow: 1;
+}
+
+/* Navigation et pied de page */
+.navbar, footer {
+    background-color: rgba(0, 0, 0, 0.5); /* Fond noir semi-transparent pour la navbar et le footer */
+}
+
+.navbar-nav {
+    margin-left: auto !important;
+}
+
+
 footer {
+    flex-shrink: 0;
     padding: 20px;
-    margin-top: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
 }
 
 footer a {
@@ -17,6 +44,131 @@ footer a {
     font-size: 1.5em;
 }
 
-.navbar,
-footer {
-    background-color: rgba(0, 0, 0, 0.5);}
+/* Conteneur avec fond blanc semi-transparent pour toutes les pages */
+.content-container {
+    max-width: 1200px;  /* Largeur maximale du contenu */
+    margin: 0 auto;      /* Centrer le contenu */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fond blanc semi-transparent */
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    width: 90%; /* Ajustement pour éviter que le conteneur ne dépasse */
+}
+
+/* Titres globaux */
+h1 {
+    color: #fff; /* Couleur blanche pour le h1 comme dans contact.html et reservations */
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    font-family: 'Dancing Script', cursive;
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+/* Formulaires globaux */
+form {
+    background-color: rgba(255, 255, 255, 0.8); /* Fond blanc semi-transparent pour les formulaires */
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%; /* S'assure que le formulaire reste à 100% de la largeur disponible */
+    box-sizing: border-box; /* Inclut les marges et bordures dans la largeur */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Assure que les input ne dépassent pas */
+}
+
+/* Les boutons doivent aussi être contenus dans le cadre */
+button {
+    margin-top: 20px;
+    width: 100%; /* Assure que les boutons restent bien à l'intérieur */
+    padding: 10px;
+    font-size: 1em;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Page des réservations */
+.reservations-page .content-container {
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fond blanc semi-transparent */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    width: 90%; /* Largeur ajustée pour éviter les dépassements */
+}
+
+.reservations-page h1 {
+    color: #fff; /* Couleur blanche pour les titres des pages reservations */
+}
+
+.reservations-page .form-control {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box; /* Assure que le champ ne dépasse pas le conteneur */
+}
+
+/* Ajout pour la réactivité sur la page de réservation */
+@media screen and (max-width: 576px) {
+    .reservations-page .content-container {
+        padding: 10px;
+        max-width: 100%; /* S'adapte à l'écran pour les petits appareils */
+    }
+    
+    .reservations-page h1 {
+        font-size: 2rem;
+    }
+    
+    form {
+        padding: 20px;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .reservations-page .content-container {
+        max-width: 50%; /* Réduction de la largeur pour les très grands écrans */
+    }
+}

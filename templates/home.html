@@ -1,61 +1,15 @@
-{% extends 'template_base.html' %} {% load static %} {% block content %}
-<style>
-    html,
-    body {
-        background: url('/media/home_page.jpg') no-repeat center fixed;
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
+{% extends 'template_base.html' %}
 
-    h1 {
-        
-        font-family: 'Dancing Script', cursive;
-    }
-
-#container{
-    margin-left: 0px;
-    
-}
-
-    .btn-primary {
-        padding: 15px 30px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        border-radius: 50px;
-        background-color: #ffc107; 
-        color: #333;
-        border: none;
-        transition: background-color 0.3s ease;
-    }
-
-    .btn-primary:hover {
-        background-color: #e0a800;
-        color: #fff;
-    }
-
-</style>
-
-<main class="px-3 ms-5 mt-5 h-100">
-    <div id="container">
-        <h1 class="display-3 text-white">Let's <span>enjoy</span>.</h1>
-        <p class="lead fw-bolder w-25 text-white text-center">
-            We bring over 30 years industry experience and passion to Moroc. With
-            dishes that are carefully designed to bring you a truly satisfying
-            Moroccan food experience that you are sure to remember.
-        </p>
-        <p class="lead">
-            <a
-                href="{% url 'reservations:reservations' %}"
-                class="fs-5 fw-bold text-white btn btn-primary"
-            >
-
-                MAKE A RESERVATION
-            </a>
-        </p>
-    </div>
-    
-</main>
-
+{% block content %}
+<div id="container" class="home-page px-3 ms-5 mt-5 h-100  text-start">
+    <h1 class="display-3 text-white text-start">Let's <span class="text-primary">enjoy</span>.</h1>
+    <p class="lead fw-bolder w-25 text-white text-start">
+        We bring over 30 years of industry experience and passion to Moroc. With dishes that are carefully designed to bring you a truly satisfying Moroccan food experience that you are sure to remember.
+    </p>
+    <p class="lead text-start">
+        <a href="{% url 'reservations:reservations' %}" class="fs-5 fw-bold btn btn-light bg-primary text-white" style="padding: 15px 30px; border-radius: 5px;">
+            MAKE A RESERVATION
+        </a>
+    </p>
+</div>
 {% endblock %}

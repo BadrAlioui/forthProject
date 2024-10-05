@@ -1,11 +1,10 @@
-{% extends 'template_base.html' %} {% load static %} {% block content %}
+{% extends 'template_base.html' %}
+{% load static %}
+{% block content %}
 
-<form
-    action="{% url 'menus:create' %}"
-    method="POST"
-    enctype="multipart/form-data"
->
-    {% csrf_token%} {{form}}
+<form class="create-menu-page" action="{% url 'menus:create' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %} 
+    {{ form }}
     <button type="submit" class="btn btn-danger">Submit</button>
 </form>
 

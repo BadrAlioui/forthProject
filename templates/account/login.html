@@ -1,60 +1,25 @@
-{% extends "template_base.html" %}
-
-{% load i18n %}
-{% load account socialaccount %}
-
-{% block head_title %}{% trans "Sign In" %}{% endblock %}
+{% extends 'template_base.html' %}
 
 {% block content %}
-<style>
-    body {
-        background: url('/media/presentation.jpg') no-repeat center fixed;
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    h1 {
-        color: #fff;
-        text-align: center;
-        margin-top: 10px;
-        font-size: 3em;
-        font-weight: bold;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    }
-
-    form {
-        background-color: rgba(255, 255, 255, 0.8);
-        padding: 30px;
-        border-radius: 15px;
-        max-width: 600px;
-        margin: 0 auto;
-        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-    }
-</style>
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2 text-white">
-            <h3>{% trans "Sign In" %}</h3>
-
-            <p>{% blocktrans %}Welcome back to the site. To contact or see the menus, please log in. If
-                you
-                have not created an account yet, then <a class="link text-warning" href="{{ signup_url }}">sign up</a>
-                first.{% endblocktrans %}</p>
+<div class="auth-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mt-3 offset-md-2 text-white">
+                <h3>Sign In</h3>
+                <p>Welcome back to the site. To contact or see the menus, please log in. If you have not created an account yet, then <a class="link text-warning" href="{{ signup_url }}">sign up</a> first.</p>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
-            <form class="login" method="POST" action="{% url 'account_login' %}">
-                {% csrf_token %}
-                {{ form.as_p }}
-                {% if redirect_field_value %}
-                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-                {% endif %}
-                <button class="btn btn-primary btn-signup right" type="submit">{% trans "Sign In" %}</button>
-            </form>
+        <div class="row">
+            <div class="col-md-8 mt-3 offset-md-2">
+                <form class="login" method="POST" action="{% url 'account_login' %}">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    {% if redirect_field_value %}
+                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                    {% endif %}
+                    <button class="btn btn-primary btn-signup right" type="submit">Sign In</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
