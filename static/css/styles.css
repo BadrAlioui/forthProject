@@ -111,6 +111,16 @@ form {
     box-sizing: border-box; /* Assure que les input ne dépassent pas */
 }
 
+.form1 {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 45px;
+}
+
 /* Les boutons doivent aussi être contenus dans le cadre */
 button {
     margin-top: 20px;

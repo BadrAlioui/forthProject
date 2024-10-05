@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 
-<div class="reservations-page">
+<div class="reservations-page my-4">
     <h1>Make a Reservation</h1>
     <form action="{% url 'reservations:liste' %}" method="POST">
         {% csrf_token %}

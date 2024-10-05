@@ -2,7 +2,8 @@
 {% load static %}
 {% block content %}
 
-<main class="liste-reservation-page">
+<section class="liste-reservation-page">
+    <h1>Reservation List</h1>
     <table class="table">
         <thead>
             <tr>
@@ -35,6 +36,6 @@
     </table>
     <a href="{% url 'home' %}" class="btn btn-primary">Return to Home</a>
     <a href="{% url 'reservations:reservations' %}" class="btn btn-secondary">Make Another Reservation</a>
-</main>
+</section>
 
 {% endblock %}
