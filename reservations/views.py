@@ -81,15 +81,11 @@ def delete_reservation(request):
         reservations = Reservation.objects.filter(
             first_name=first_name, last_name=last_name, user=request.user
         )
-        
         if reservations.exists():
-            # If there are multiple reservations, you can either delete all or handle accordingly
+            # you can either delete all or handle accordingly
             reservations.delete()  # Deletes all matching reservations
             messages.success(request, "Reservation(s) deleted successfully")
         else:
             messages.error(request, "No matching reservations found.")
-        
         return redirect("reservations:liste")
-    
     return redirect("reservations:liste")
-
