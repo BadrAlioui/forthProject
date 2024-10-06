@@ -131,6 +131,23 @@ Here are some screenshots of the application:
 
 ![mysite_forms validator](https://github.com/BadrAlioui/forthProject/blob/master/media/mysite_forms.png?raw=true)
 
+***Menu***
+
+-Menu views.py:
+
+![menu_views validator](https://github.com/BadrAlioui/forthProject/blob/master/media/menu_views.png?raw=true)
+
+-Menu forms.py:
+
+![menu_forms validator](https://github.com/BadrAlioui/forthProject/blob/master/media/media_forms.png?raw=true)
+
+-Menu urls.py:
+
+![menu_urls validator](https://github.com/BadrAlioui/forthProject/blob/master/media/media_urls.png?raw=true)
+
+-Menu models.py:
+
+![menu_models validator](https://github.com/BadrAlioui/forthProject/blob/master/media/media_models.png?raw=true)
 
 ## Accessibility
 We are committed to ensuring accessibility for all users. Our platform has been tested to provide an inclusive user experience.
