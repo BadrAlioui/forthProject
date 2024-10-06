@@ -88,7 +88,7 @@ Here are some screenshots of the application:
 **CSS Validation**:
 - All CSS files passed without errors:
 
-- css validator in style.css:
+- css validator in styles.css:
 
 ![css validator](https://github.com/BadrAlioui/forthProject/blob/master/media/css_validator.png?raw=true)
 
@@ -130,6 +130,8 @@ Here are some screenshots of the application:
 -Mysite forms.py:
 
 ![mysite_forms validator](https://github.com/BadrAlioui/forthProject/blob/master/media/mysite_forms.png?raw=true)
+
+
 ## Accessibility
 We are committed to ensuring accessibility for all users. Our platform has been tested to provide an inclusive user experience.
 

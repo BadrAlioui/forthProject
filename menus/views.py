@@ -3,13 +3,16 @@ from django.http import HttpResponse, HttpResponseRedirect
 from .forms import MenuForm
 from .models import Menu
 
+
 def menus_page(request):
     menus = Menu.objects.all().order_by("-date_displayed")
     return render(request, "menus/list.html", context={"menus": menus})
 
+
 def menu_page(request, slug):
     menu = get_object_or_404(Menu, slug=slug)
     return render(request, "menus/detail.html", context={"menu": menu})
+
 
 def create_menu(request):
     if request.method == "POST":
@@ -19,5 +22,4 @@ def create_menu(request):
             return HttpResponseRedirect('/menus/')
     else:
         form = MenuForm()  # Formulaire vide pour une requête GET
-    
-    return render(request, "menus/create.html", context={"form": form})
+        return render(request, "menus/create.html", context={"form": form})

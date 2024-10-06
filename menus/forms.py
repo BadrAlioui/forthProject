@@ -6,4 +6,4 @@ class MenuForm(ModelForm):
     class Meta:
         model = Menu
         fields = ['title', 'content', 'slug', 'price', 'image']
-
+        
