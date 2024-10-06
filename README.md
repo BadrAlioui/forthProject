@@ -98,7 +98,22 @@ Here are some screenshots of the application:
 ![Javascript validator](https://github.com/BadrAlioui/forthProject/blob/master/media/javascript_validator.png?raw=true)
 
 **Python Validation**:
-To be added.
+
+-reservation views.py:
+
+![reservation_views validator](https://github.com/BadrAlioui/forthProject/blob/master/media/view_reservation.png?raw=true)
+
+-reservation urls.py:
+
+![reservation_urls validator](https://github.com/BadrAlioui/forthProject/blob/master/media/reservation_urls.png?raw=true)
+
+-reservation models.py:
+
+![reservation_urls validator](https://github.com/BadrAlioui/forthProject/blob/master/media/reservation_model.png?raw=true)
+
+-reservation forms.py:
+
+![reservation_forms validator](https://github.com/BadrAlioui/forthProject/blob/master/media/reservation_form.png?raw=true)
 
 ## Accessibility
 We are committed to ensuring accessibility for all users. Our platform has been tested to provide an inclusive user experience.
