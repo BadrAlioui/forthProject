@@ -101,51 +101,51 @@ Here are some screenshots of the application:
 
 ***Reservation***
 
--reservation views.py:
+-Reservation Views:
 
 ![reservation_views validator](https://github.com/BadrAlioui/forthProject/blob/master/media/view_reservation.png?raw=true)
 
--reservation urls.py:
+-Reservation Urls:
 
 ![reservation_urls validator](https://github.com/BadrAlioui/forthProject/blob/master/media/reservation_urls.png?raw=true)
 
--reservation models.py:
+-Reservation Models:
 
 ![reservation_urls validator](https://github.com/BadrAlioui/forthProject/blob/master/media/reservation_model.png?raw=true)
 
--reservation forms.py:
+-Reservation Forms:
 
 ![reservation_forms validator](https://github.com/BadrAlioui/forthProject/blob/master/media/reservation_form.png?raw=true)
 
 ***Mysite***
 
--Mysite views.py:
+-Mysite Views:
 
 ![mysite_views validator](https://github.com/BadrAlioui/forthProject/blob/master/media/mysite_view.png?raw=true)
 
--Mysite urls.py:
+-Mysite Urls:
 
 ![mysite_urls validator](https://github.com/BadrAlioui/forthProject/blob/master/media/mysite_urls.png?raw=true)
 
--Mysite forms.py:
+-Mysite Forms:
 
 ![mysite_forms validator](https://github.com/BadrAlioui/forthProject/blob/master/media/mysite_forms.png?raw=true)
 
 ***Menu***
 
--Menu views.py:
+-Menu Views:
 
 ![menu_views validator](https://github.com/BadrAlioui/forthProject/blob/master/media/menu_views.png?raw=true)
 
--Menu forms.py:
+-Menu Forms:
 
 ![menu_forms validator](https://github.com/BadrAlioui/forthProject/blob/master/media/media_forms.png?raw=true)
 
--Menu urls.py:
+-Menu Urls:
 
 ![menu_urls validator](https://github.com/BadrAlioui/forthProject/blob/master/media/media_urls.png?raw=true)
 
--Menu models.py:
+-Menu Models:
 
 ![menu_models validator](https://github.com/BadrAlioui/forthProject/blob/master/media/media_models.png?raw=true)
 
