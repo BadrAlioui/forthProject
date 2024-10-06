@@ -99,6 +99,8 @@ Here are some screenshots of the application:
 
 **Python Validation**:
 
+***Reservation***
+
 -reservation views.py:
 
 ![reservation_views validator](https://github.com/BadrAlioui/forthProject/blob/master/media/view_reservation.png?raw=true)
@@ -115,6 +117,19 @@ Here are some screenshots of the application:
 
 ![reservation_forms validator](https://github.com/BadrAlioui/forthProject/blob/master/media/reservation_form.png?raw=true)
 
+***Mysite***
+
+-Mysite views.py:
+
+![mysite_views validator](https://github.com/BadrAlioui/forthProject/blob/master/media/mysite_view.png?raw=true)
+
+-Mysite urls.py:
+
+![mysite_urls validator](https://github.com/BadrAlioui/forthProject/blob/master/media/mysite_urls.png?raw=true)
+
+-Mysite forms.py:
+
+![mysite_forms validator](https://github.com/BadrAlioui/forthProject/blob/master/media/mysite_forms.png?raw=true)
 ## Accessibility
 We are committed to ensuring accessibility for all users. Our platform has been tested to provide an inclusive user experience.
 
