@@ -77,12 +77,19 @@ def delete_reservation(request):
         first_name = request.POST.get('first_name')
         last_name = request.POST.get('last_name')
 
-        reservation = get_object_or_404(
-            Reservation, first_name=first_name,
-            last_name=last_name, user=request.user
+        # Filter reservations by first and last name
+        reservations = Reservation.objects.filter(
+            first_name=first_name, last_name=last_name, user=request.user
         )
-
-        reservation.delete()
-        messages.success(request, "Reservation deleted successfully")
+        
+        if reservations.exists():
+            # If there are multiple reservations, you can either delete all or handle accordingly
+            reservations.delete()  # Deletes all matching reservations
+            messages.success(request, "Reservation(s) deleted successfully")
+        else:
+            messages.error(request, "No matching reservations found.")
+        
         return redirect("reservations:liste")
+    
     return redirect("reservations:liste")
+
