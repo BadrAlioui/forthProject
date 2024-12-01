@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect
 from .forms import MenuForm
 from .models import Menu
+from django.contrib import messages
 
 
 def menus_page(request):
@@ -19,7 +20,13 @@ def create_menu(request):
         form = MenuForm(request.POST, request.FILES)
         if form.is_valid():  # Vérifie si le formulaire est valide
             form.save()
-            return HttpResponseRedirect('/menus/')
+            messages.success(request, "Menu created successfully!")
+            return HttpResponseRedirect('/menus/')  # Redirection après succès
+        else:
+            messages.error(request, "Error in form submission. Please check your inputs. For exemple, the price must be greater than 0.")
+            # Retourne le formulaire avec les erreurs
+            return render(request, "menus/create.html", context={"form": form})
     else:
         form = MenuForm()  # Formulaire vide pour une requête GET
-        return render(request, "menus/create.html", context={"form": form})
+    return render(request, "menus/create.html", context={"form": form})
+
