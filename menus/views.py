@@ -26,7 +26,7 @@ def create_menu(request):
             messages.success(request, "Menu created successfully!")
             return HttpResponseRedirect('/menus/')  # Redirection après succès
         else:
-            messages.error(request, "Error in form submission. Please check your inputs. For exemple, the price must be greater than 0.")
+            messages.error(request, "Error in form submission. Please check your inputs")
             # Retourne le formulaire avec les erreurs
             return render(request, "menus/create.html", context={"form": form})
     else:
