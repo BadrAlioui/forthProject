@@ -160,6 +160,9 @@ We are committed to ensuring accessibility for all users. Our platform has been 
 
 ![Accessibility Desktop](https://github.com/BadrAlioui/forthProject/blob/master/media/desktop_accessibility.png?raw=true)
 
+
+## Manual Testing:
+
 [Manual Testing Documentation](https://github.com/BadrAlioui/forthProject/blob/master/manual_testing.md)
 
 
@@ -180,13 +183,16 @@ Heroku is a cloud platform service that enables developers to build, run, and op
 ##### Update `settings.py`
 
 ##### 1. Set `ALLOWED_HOSTS`:
-```python
+
+
 ALLOWED_HOSTS = ['your-heroku-app.herokuapp.com', 'localhost']
 
 
 You can access the live version here: [Restaurant Booking System](https://quiet-crag-61811-4fb808af66c6.herokuapp.com/)
 
 ## User Stories
+
+You can access the user stories, organized by different levels of priority, here: [User Stories](https://github.com/BadrAlioui/forthProject/issues)
 
 | User Story | Description |
 |------------|-------------|
