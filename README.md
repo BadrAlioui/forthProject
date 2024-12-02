@@ -163,7 +163,7 @@ We are committed to ensuring accessibility for all users. Our platform has been 
 
 ## Manual Testing:
 
-[Manual Testing Documentation](https://github.com/BadrAlioui/forthProject/blob/master/manual_testing.md)
+[Manual Testing Documentation](https://github.com/BadrAlioui/forthProject/blob/master/TESTING.md)
 
 
 ## Deployment
