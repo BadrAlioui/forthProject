@@ -192,7 +192,7 @@ You can access the live version here: [Restaurant Booking System](https://quiet-
 
 ## User Stories
 
-You can access the user stories, organized by different levels of priority, here: [User Stories](https://github.com/BadrAlioui/forthProject/issues)
+You can access the user stories, organized by different levels of priority, here: [User Stories](https://github.com/BadrAlioui/forthProject/issues), or here: [Kanban](https://github.com/users/BadrAlioui/projects/2)
 
 | User Story | Description |
 |------------|-------------|
