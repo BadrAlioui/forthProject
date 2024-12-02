@@ -160,7 +160,7 @@ We are committed to ensuring accessibility for all users. Our platform has been 
 
 ![Accessibility Desktop](https://github.com/BadrAlioui/forthProject/blob/master/media/desktop_accessibility.png?raw=true)
 
-![Manual Testing Documentation](https://github.com/BadrAlioui/forthProject/blob/master/manual_testing.md)
+[Manual Testing Documentation](https://github.com/BadrAlioui/forthProject/blob/master/manual_testing.md)
 
 
 ## Deployment
