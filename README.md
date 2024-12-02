@@ -164,9 +164,25 @@ We are committed to ensuring accessibility for all users. Our platform has been 
 
 
 ## Deployment
+
 The booking system is hosted on Heroku. To deploy your own version:
-1. Upload the necessary files to your Heroku repository.
-2. Set up the configuration for your app to be online.
+
+#### Deploying a Django Project on Heroku
+
+Heroku is a cloud platform service that enables developers to build, run, and operate applications entirely in the cloud. Here is how to use it:
+
+1. Create an account or log in to Heroku.
+2. On the dashboard, click on **"New"** and select **"Create new app"**.
+3. Give the app a unique name and select the region closest to you. Then click **"Create app"** to confirm.
+
+#### Settings
+
+##### Update `settings.py`
+
+##### 1. Set `ALLOWED_HOSTS`:
+```python
+ALLOWED_HOSTS = ['your-heroku-app.herokuapp.com', 'localhost']
+
 
 You can access the live version here: [Restaurant Booking System](https://quiet-crag-61811-4fb808af66c6.herokuapp.com/)
 
