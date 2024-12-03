@@ -5,8 +5,9 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 
+@login_required(login_url="/accounts/login/")
 def reservation_page(request):
-    reservations = Reservation.objects.all()
+    reservations = Reservation.objects.filter(user=request.user)
     return render(
         request, "reservations/reservations.html",
         context={'reservations': reservations}
@@ -30,7 +31,7 @@ def liste_reservation(request):
     else:
         form = ReservationForm()
 
-    reservations = Reservation.objects.all()
+    reservations = Reservation.objects.filter(user=request.user)
 
     return render(
         request, "reservations/liste_reservation.html", {
