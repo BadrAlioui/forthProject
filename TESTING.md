@@ -1,3 +1,7 @@
+# Manual Testing
+
+[Go to README](README.md)
+
 ## Manual Testing for Reservations
 
 | FEATURE TESTED           | TEST CASE                                  | PRE-CONDITION                           | EXPECTED RESULT                                                                                       | MESSAGE ALERT                              | ACTUAL RESULT                                                                                                           | PASS/FAIL |
@@ -25,3 +29,4 @@
 | Message Alert System      | Error message on invalid form submission   | User submits an invalid menu form       | An error alert is displayed at the top of the page                                                 | "Error in form submission. Please check your inputs." | Error message appears correctly when the user submits invalid data                                                    | PASS      |
 | Slug Uniqueness Validation| Submit a form with a duplicate slug        | User submits a menu form with an existing slug | Form submission is rejected, and an error message is displayed                                        | "Slug must be unique."                | Duplicate slug is correctly detected, and the user is informed                                                         | PASS      |
 | Price Validation          | Submit a form with a negative price        | User submits a menu form with a negative price | Form submission is rejected, and an error message is displayed                                        | "Ensure this value is greater than or equal to 0.01." | Negative price is correctly rejected, and an error message appears                                                     | PASS      |
+
