@@ -24,10 +24,7 @@ class Reservation(models.Model):
     def clean(self):
         self.first_name = self.first_name.lower()
         self.last_name = self.last_name.lower()
-        if self.date_booking < timezone.now():
-            raise ValidationError(
-                "The date cannot be in the past or today!"
-            )
+        
         if Reservation.objects.filter(
             date_booking=self.date_booking
         ).count() >= 15:
