@@ -13,9 +13,10 @@ class ReservationForm(forms.ModelForm):
 
     def clean_number_of_persons(self):
         number_of_persons = self.cleaned_data.get('number_of_persons')
-        if number_of_persons <= 0:
-            raise forms.ValidationError("Number of persons must be greater than 0")
+        if number_of_persons is None or number_of_persons <= 0:
+            raise forms.ValidationError("The number of persons must be greater than 0.")
         return number_of_persons
+
     
     
     def clean_date_booking(self):
