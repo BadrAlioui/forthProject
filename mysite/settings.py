@@ -2,6 +2,8 @@ import os
 import django_heroku
 from decouple import config
 import dj_database_url 
+import environ
+
 
 
 from pathlib import Path
@@ -88,11 +90,14 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 
 # Database
+# Initialise les variables d'environnement
+env = environ.Env()
+environ.Env.read_env()
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',  
-    }
+    'default': env.db(
+        default='postgresql://neondb_owner:wyevCNg9qiD8@ep-sparkling-sun-a2cyqhyr.eu-central-1.aws.neon.tech/sweat_dock_rule_815158'
+    )
 }
 
 

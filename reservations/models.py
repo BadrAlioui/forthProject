@@ -43,8 +43,8 @@ class Reservation(models.Model):
 
         # Vérifier les doublons
         if Reservation.objects.filter(
-            first_name=self.first_name,
-            last_name=self.last_name,
+            first_name=self.first_name.lower(),
+            last_name=self.last_name.lower(),
             date_booking=self.date_booking
         ).exists():
             raise ValidationError("You have already booked a table for this date!")
