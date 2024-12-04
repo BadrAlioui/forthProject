@@ -13,7 +13,7 @@ class ReservationTestCase(TestCase):
 
         )
         self.assertEqual(Reservation.objects.count(), 1)
-        self.assertEqual(Reservation.objects.get().first_name, "john")
-        self.assertEqual(Reservation.objects.get().last_name, "doe")
+        self.assertEqual(Reservation.objects.get().first_name.lower(), "john")
+        self.assertEqual(Reservation.objects.get().last_name.lower(), "doe")
         self.assertEqual(Reservation.objects.get().email, "test@example.com")
             

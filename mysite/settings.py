@@ -2,8 +2,6 @@ import os
 import django_heroku
 from decouple import config
 import dj_database_url 
-import environ
-
 
 
 from pathlib import Path
@@ -90,19 +88,27 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 
 # Database
-# Initialise les variables d'environnement
-env = environ.Env()
-environ.Env.read_env()
-
-DATABASES = {
-    'default': env.db(
-        default='postgresql://neondb_owner:wyevCNg9qiD8@ep-sparkling-sun-a2cyqhyr.eu-central-1.aws.neon.tech/sweat_dock_rule_815158'
-    )
-}
 
 
-DATABASES['default']=dj_database_url.config(default='postgres://u13o8l34mi3nv2:pc6a399c096915def0d191bd397bb80397819a4844bfdd7e1be813615b1b3511c@c7u1tn6bvvsodf.cluster-czz5s0kz4scl.eu-west-1.rds.amazonaws.com:5432/d6fo0p414q4spq')
+import sys
 
+
+# Configuration de la base de données
+if 'test' in sys.argv:
+    # Utilisation de SQLite pour les tests
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': ':memory:',
+        }
+    }
+else:
+    # PostgreSQL pour le développement et la production
+    DATABASES = {
+        'default': dj_database_url.config(
+            default='postgres://u13o8l34mi3nv2:pc6a399c096915def0d191bd397bb80397819a4844bfdd7e1be813615b1b3511c@c7u1tn6bvvsodf.cluster-czz5s0kz4scl.eu-west-1.rds.amazonaws.com:5432/d6fo0p414q4spq'
+        )
+    }
 
 
 
