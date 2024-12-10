@@ -8,6 +8,7 @@ class ReservationForm(forms.ModelForm):
         model = Reservation
         exclude = ['user']
 
+    date_booking = forms.DateTimeField(required=False)
     def clean_number_of_persons(self):
         number_of_persons = self.cleaned_data.get('number_of_persons')
         if number_of_persons is None or number_of_persons <= 0:

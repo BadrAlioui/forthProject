@@ -11,7 +11,7 @@ class Reservation(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     email = models.EmailField()
-    number_of_persons = models.PositiveIntegerField()  # Changement ici
+    number_of_persons = models.IntegerField()  # Changement ici
     date_booking = models.DateTimeField()
     time = models.TimeField(default='00:00')
 
