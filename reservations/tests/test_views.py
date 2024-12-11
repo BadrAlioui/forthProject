@@ -1,100 +1,97 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.test import TestCase
+from django.urls import reverse
+from django.contrib.auth.models import User
 from reservations.models import Reservation
-from reservations.forms import ReservationForm
-from django.contrib import messages
-from django.contrib.auth.decorators import login_required
+from django.utils.timezone import now, timedelta
 
 
-@login_required(login_url="/accounts/login/")
-def reservation_page(request):
-    """Affiche la page de création de réservation et les réservations existantes."""
-    reservations = Reservation.objects.filter(user=request.user)
-    if not reservations.exists():
-        messages.info(request, "You have no reservations.")
-    return render(
-        request, "reservations/reservations.html",
-        context={"reservations": reservations}
-    )
+class ReservationViewsTest(TestCase):
+    def setUp(self):
+        """Initialise un utilisateur et une réservation pour les tests."""
+        self.user = User.objects.create_user(username="testuser", password="testpass")
+        self.client.login(username="testuser", password="testpass")
+        self.reservation = Reservation.objects.create(
+            user=self.user,
+            first_name="john",
+            last_name="doe",
+            email="john.doe@example.com",
+            number_of_persons=5,
+            date_booking=now() + timedelta(days=1),
+            time="18:00"
+        )
 
+    def test_reservation_page(self):
+        """Test si la page des réservations s'affiche correctement."""
+        response = self.client.get(reverse("reservations:reservations"))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, "reservations/reservations.html")
+        # Vérifie que 'john' est bien présent dans le contenu de la page
+        self.assertContains(response, "john".lower())
 
-@login_required(login_url="/accounts/login/")
-def liste_reservation(request):
-    """Affiche la liste des réservations et permet d'en ajouter."""
-    if request.method == "POST":
-        form = ReservationForm(request.POST)
-        if form.is_valid():
-            reservation = form.save(commit=False)
-            reservation.user = request.user
-            reservation.save()
-            messages.success(request, "Booking has been added")
-            return redirect("home")
-        else:
-            for _, errors in form.errors.items():
-                for error in errors:
-                    messages.error(request, error)
-    else:
-        form = ReservationForm()
+    def test_liste_reservation_get(self):
+        """Test si la vue liste_reservation affiche le formulaire et les réservations."""
+        response = self.client.get(reverse("reservations:liste"))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, "reservations/liste_reservation.html")
+        self.assertContains(response, "john".lower())
 
-    reservations = Reservation.objects.filter(user=request.user)
-    if not reservations.exists():
-        messages.info(request, "No reservations found.")
-    
-    return render(
-        request, "reservations/liste_reservation.html",
-        context={
-            "form": form,
-            "reservations": reservations
-        }
-    )
+    def test_liste_reservation_post_valid(self):
+        """Test si une réservation valide est ajoutée."""
+        response = self.client.post(
+            reverse("reservations:liste"),
+            data={
+                "first_name": "alice",
+                "last_name": "smith",
+                "email": "alice.smith@example.com",
+                "number_of_persons": 2,
+                "date_booking": now() + timedelta(days=2),
+                "time": "19:00"
+            }
+        )
+        self.assertEqual(response.status_code, 302)  # Redirection après succès
+        self.assertTrue(
+            Reservation.objects.filter(first_name="alice", last_name="smith").exists()
+        )
 
+    def test_edit_reservation_get(self):
+        """Test si la vue edit affiche correctement une réservation existante."""
+        response = self.client.get(reverse("reservations:edit", args=[self.reservation.id]))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, "reservations/edit_reservation.html")
+        self.assertContains(response, "john".lower())
 
-@login_required(login_url="/accounts/login/")
-def edit(request, list_id):
-    """Affiche et permet de modifier une réservation existante."""
-    try:
-        get_reservation = Reservation.objects.get(pk=list_id)
-    except Reservation.DoesNotExist:
-        messages.error(request, "Reservation not found.")
-        return redirect("reservations:liste")
+    def test_edit_reservation_post_valid(self):
+        """Test si une réservation existante peut être modifiée."""
+        response = self.client.post(
+            reverse("reservations:edit", args=[self.reservation.id]),
+            data={
+                "first_name": "john",
+                "last_name": "doe",
+                "email": "john.doe@example.com",
+                "number_of_persons": 10,
+                "date_booking": now() + timedelta(days=1),
+                "time": "18:30"
+            }
+        )
+        self.assertEqual(response.status_code, 302)  # Vérifie la redirection
+        self.reservation.refresh_from_db()
+        self.assertEqual(self.reservation.number_of_persons, 10)
 
-    if get_reservation.user != request.user:
-        messages.error(request, "Not allowed to edit this reservation.")
-        return redirect("reservations:liste")
+    def test_delete_reservation_post(self):
+        """Test si une réservation est supprimée avec succès."""
+        response = self.client.post(
+            reverse("reservations:delete"),
+            data={"first_name": "john", "last_name": "doe"}
+        )
+        self.assertEqual(response.status_code, 302)
+        self.assertFalse(
+            Reservation.objects.filter(pk=self.reservation.pk).exists()
+        )
 
-    if request.method == "POST":
-        form = ReservationForm(request.POST, instance=get_reservation)
-        if form.is_valid():
-            form.save()
-            messages.success(request, "Booking has been edited")
-            return redirect("reservations:liste")
-        else:
-            # Log des erreurs pour debug si nécessaire
-            print("Form errors:", form.errors)
-            messages.error(request, "There was an error in your submission.")
-    else:
-        form = ReservationForm(instance=get_reservation)
-
-    return render(
-        request, "reservations/edit_reservation.html",
-        context={
-            "get_reservation": get_reservation,
-            "form": form
-        }
-    )
-
-
-@login_required(login_url="/accounts/login/")
-def delete_reservation(request):
-    """Permet de supprimer une réservation existante."""
-    if request.method == "POST":
-        reservation_id = request.POST.get("reservation_id")  # Modification pour utiliser l'ID
-        try:
-            reservation = Reservation.objects.get(id=reservation_id, user=request.user)
-            reservation.delete()
-            messages.success(request, "Reservation deleted successfully.")
-        except Reservation.DoesNotExist:
-            messages.error(request, "Reservation not found.")
+    def test_access_without_login(self):
+        """Test si les vues protégées redirigent les utilisateurs non connectés."""
+        self.client.logout()
+        response = self.client.get(reverse("reservations:reservations"))
         
-        return redirect("reservations:liste")
-
-    return redirect("reservations:liste")
+        # Vérifie la redirection vers la page de login avec la bonne URL
+        self.assertRedirects(response, "/accounts/login/?next=/reservations/")

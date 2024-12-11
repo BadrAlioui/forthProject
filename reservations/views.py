@@ -60,6 +60,7 @@ def edit(request, list_id):
             messages.success(request, "Booking has been edited")
             return redirect('reservations:liste')
         else:
+            print(form.errors)
             messages.error(request, "There was an error in your submission.")
     else:
         form = ReservationForm(instance=get_reservation)
