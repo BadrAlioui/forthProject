@@ -1,41 +1,85 @@
-{% extends "template_base.html" %}
-{% load static %}
-{% block content %}
+{% extends "template_base.html" %} {% load static %} {% block content %}
 
 <div class="reservations-page my-4">
     <h1>Make a Reservation</h1>
+
+    {% if reservations %}
+    <ul>
+        {% for reservation in reservations %}
+        <li>
+            {{ reservation.first_name }} {{ reservation.last_name }} - {{
+            reservation.date_booking }} at {{ reservation.time }}
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p class="text-muted">No reservations found.</p>
+    {% endif %}
+
     <form action="{% url 'reservations:liste' %}" method="POST">
         {% csrf_token %}
         <div class="form-group">
             <label for="firstname" class="form-label">First Name</label>
-            <input type="text" class="form-control" id="firstname" name="first_name" required>
+            <input
+                type="text"
+                class="form-control"
+                id="firstname"
+                name="first_name"
+                required
+            />
         </div>
-
         <div class="form-group">
             <label for="lastname" class="form-label">Last Name</label>
-            <input type="text" class="form-control" id="lastname" name="last_name" required>
+            <input
+                type="text"
+                class="form-control"
+                id="lastname"
+                name="last_name"
+                required
+            />
         </div>
-
         <div class="form-group">
             <label for="numPersons" class="form-label">Number of persons</label>
-            <input type="number" class="form-control" id="numPersons" name="number_of_persons" required>
+            <input
+                type="number"
+                class="form-control"
+                id="numPersons"
+                name="number_of_persons"
+                required
+            />
         </div>
-
         <div class="form-group">
-            <label for="reservationDate" class="form-label">Date of reservation</label>
-            <input type="date" class="form-control" id="reservationDate" name="date_booking" required>
+            <label for="reservationDate" class="form-label"
+                >Date of reservation</label
+            >
+            <input
+                type="date"
+                class="form-control"
+                id="reservationDate"
+                name="date_booking"
+                required
+            />
         </div>
-
         <div class="form-group">
             <label for="reservationTime" class="form-label">Time</label>
-            <input type="time" class="form-control" id="reservationTime" name="time" required>
+            <input
+                type="time"
+                class="form-control"
+                id="reservationTime"
+                name="time"
+                required
+            />
         </div>
-
         <div class="form-group">
             <label for="email" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="email" name="email" required>
+            <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                required
+            />
         </div>
-
         <button type="submit" class="btn btn-primary mb-4 w-100">Submit</button>
     </form>
 </div>
