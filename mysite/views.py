@@ -26,5 +26,5 @@ def contact_page(request):
                 fail_silently=False,
             )
             messages.success(request, "Your message has been sent successfully!")
-            return redirect('home')
+            return redirect('contact')
     return render(request, 'contact.html', {'form': form})

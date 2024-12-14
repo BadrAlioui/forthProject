@@ -16,7 +16,7 @@ class TestContactForm(TestCase):
 
         # Check that the form is valid
         self.assertEqual(response.status_code, 302)
-        self.assertRedirects(response, reverse('home'))
+        self.assertRedirects(response, reverse('contact'))
         
 
 
