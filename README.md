@@ -180,6 +180,8 @@ Using the `coverage.py` tool, I measured the test coverage of the project. The r
 | Forms        | 100%      |
 | Overall      | 96%      |
 
+![coverage report](https://github.com/BadrAlioui/forthProject/blob/master/media/coverage.png)
+
 ### Helpful Resources
 The course [Unit Testing in Django](https://netninja.dev/courses/unit-testing-in-django/) by [Net Ninja](https://netninja.dev/) was incredibly helpful in improving my understanding of testing in Django. It provided practical guidance on how to write better tests and achieve high coverage.
 
