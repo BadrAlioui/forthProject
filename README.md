@@ -165,6 +165,25 @@ We are committed to ensuring accessibility for all users. Our platform has been 
 
 [Manual Testing Documentation](https://github.com/BadrAlioui/forthProject/blob/master/TESTING.md)
 
+## Automated Testing and Code Coverage
+
+To ensure the application runs smoothly and reliably, extensive automated tests were written for key components like forms, views, and models. These tests help maintain the overall quality of the project.
+
+### Code Coverage
+
+Using the `coverage.py` tool, I measured the test coverage of the project. The results show an overall coverage of **over or equal to 90%**, highlighting that the most critical parts of the application are well-tested.
+
+| Component    | Coverage |
+|--------------|----------|
+| Views        | 90%      |
+| Models       | 100%      |
+| Forms        | 100%      |
+| Overall      | 96%      |
+
+### Helpful Resources
+The course [Unit Testing in Django](https://netninja.dev/courses/unit-testing-in-django/) by [Net Ninja](https://netninja.dev/) was incredibly helpful in improving my understanding of testing in Django. It provided practical guidance on how to write better tests and achieve high coverage.
+
+
 
 ## Deployment
 

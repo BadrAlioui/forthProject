@@ -7,7 +7,7 @@ from django.utils.timezone import now, timedelta
 
 class ReservationViewsTest(TestCase):
     def setUp(self):
-        """Initialise un utilisateur et une réservation pour les tests."""
+        """Initialise a user and a reservation for the tests."""
         self.user = User.objects.create_user(username="testuser", password="testpass")
         self.client.login(username="testuser", password="testpass")
         self.reservation = Reservation.objects.create(
@@ -21,22 +21,21 @@ class ReservationViewsTest(TestCase):
         )
 
     def test_reservation_page(self):
-        """Test si la page des réservations s'affiche correctement."""
+        """Test if the reservations view displays the reservations."""
         response = self.client.get(reverse("reservations:reservations"))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, "reservations/reservations.html")
-        # Vérifie que 'john' est bien présent dans le contenu de la page
         self.assertContains(response, "john".lower())
 
     def test_liste_reservation_get(self):
-        """Test si la vue liste_reservation affiche le formulaire et les réservations."""
+        """Test if the list view displays the reservations."""
         response = self.client.get(reverse("reservations:liste"))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, "reservations/liste_reservation.html")
         self.assertContains(response, "john".lower())
 
     def test_liste_reservation_post_valid(self):
-        """Test si une réservation valide est ajoutée."""
+        """Test if a new reservation can be created."""
         response = self.client.post(
             reverse("reservations:liste"),
             data={
@@ -48,20 +47,20 @@ class ReservationViewsTest(TestCase):
                 "time": "19:00"
             }
         )
-        self.assertEqual(response.status_code, 302)  # Redirection après succès
+        self.assertEqual(response.status_code, 302)
         self.assertTrue(
             Reservation.objects.filter(first_name="alice", last_name="smith").exists()
         )
 
     def test_edit_reservation_get(self):
-        """Test si la vue edit affiche correctement une réservation existante."""
+        """Test if an existing reservation can be edited."""
         response = self.client.get(reverse("reservations:edit", args=[self.reservation.id]))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, "reservations/edit_reservation.html")
         self.assertContains(response, "john".lower())
 
     def test_edit_reservation_post_valid(self):
-        """Test si une réservation existante peut être modifiée."""
+        """Test if an existing reservation can be edited."""
         response = self.client.post(
             reverse("reservations:edit", args=[self.reservation.id]),
             data={
@@ -73,12 +72,12 @@ class ReservationViewsTest(TestCase):
                 "time": "18:30"
             }
         )
-        self.assertEqual(response.status_code, 302)  # Vérifie la redirection
+        self.assertEqual(response.status_code, 302)
         self.reservation.refresh_from_db()
         self.assertEqual(self.reservation.number_of_persons, 10)
 
     def test_delete_reservation_post(self):
-        """Test si une réservation est supprimée avec succès."""
+        """Test if an existing reservation can be deleted."""
         response = self.client.post(
             reverse("reservations:delete"),
             data={"first_name": "john", "last_name": "doe"}
@@ -89,9 +88,7 @@ class ReservationViewsTest(TestCase):
         )
 
     def test_access_without_login(self):
-        """Test si les vues protégées redirigent les utilisateurs non connectés."""
+        """Test if the user is redirected to the login page if not authenticated."""
         self.client.logout()
-        response = self.client.get(reverse("reservations:reservations"))
-        
-        # Vérifie la redirection vers la page de login avec la bonne URL
+        response = self.client.get(reverse("reservations:reservations"))    
         self.assertRedirects(response, "/accounts/login/?next=/reservations/")
