@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     
     'menus',
     'reservations',
+    'cloudinary',
+    'cloudinary_storage',
     
 ]
 
