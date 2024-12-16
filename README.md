@@ -152,7 +152,7 @@ Here are some screenshots of the application:
 
 -Menu Forms:
 
-![menu_forms validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/media/images_forms.png?raw=true)
+![menu_forms validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/images_forms.png?raw=true)
 
 -Menu Urls:
 
@@ -160,7 +160,7 @@ Here are some screenshots of the application:
 
 -Menu Models:
 
-![menu_models validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/media/images_models.png?raw=true)
+![menu_models validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/images_models.png?raw=true)
 
 ## Accessibility
 
