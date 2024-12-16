@@ -207,9 +207,9 @@ The course [Unit Testing in Django](https://netninja.dev/courses/unit-testing-in
 
 #### Home Page
 
-![wireframe home_page](https://github.com/BadrAlioui/forthProject/blob/master/media/images/images/wireframe_mobile.png)
+![wireframe home_page](https://github.com/BadrAlioui/forthProject/blob/master/media/images/wireframe_mobile.png)
 
-![wireframe home_page](https://github.com/BadrAlioui/forthProject/blob/master/media/images/images/wireframe_home_page_desktop.png)
+![wireframe home_page](https://github.com/BadrAlioui/forthProject/blob/master/media/images/wireframe_home_page_desktop.png)
 
 ## Deployment
 
