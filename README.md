@@ -148,19 +148,19 @@ Here are some screenshots of the application:
 
 -Menu Views:
 
-![menu_views validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/menu_views.png?raw=true)
+![menu_views validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/menu_views.png)
 
 -Menu Forms:
 
-![menu_forms validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/images_forms.png?raw=true)
+![menu_forms validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/menu_forms.png)
 
 -Menu Urls:
 
-![menu_urls validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/media/images_urls.png?raw=true)
+![menu_urls validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/media/menu_urls.png)
 
 -Menu Models:
 
-![menu_models validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/images_models.png?raw=true)
+![menu_models validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/menu_models.png)
 
 ## Accessibility
 

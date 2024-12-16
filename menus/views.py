@@ -5,8 +5,10 @@ from .models import Menu
 from django.contrib import messages
 from django.contrib.auth.decorators import user_passes_test
 
+
 def admin_required(user):
     return user.is_staff
+
 
 def menus_page(request):
     menus = Menu.objects.all().order_by("-date_displayed")
@@ -17,6 +19,7 @@ def menu_page(request, slug):
     menu = get_object_or_404(Menu, slug=slug)
     return render(request, "menus/detail.html", context={"menu": menu})
 
+
 @user_passes_test(admin_required)
 def create_menu(request):
     if request.method == "POST":
@@ -26,10 +29,9 @@ def create_menu(request):
             messages.success(request, "Menu created successfully!")
             return HttpResponseRedirect('/menus/')  # Redirection après succès
         else:
-            messages.error(request, "Error in form submission. Please check your inputs")
+            messages.error(request, "Error. Please check your inputs")
             # Retourne le formulaire avec les erreurs
             return render(request, "menus/create.html", context={"form": form})
     else:
         form = MenuForm()  # Formulaire vide pour une requête GET
     return render(request, "menus/create.html", context={"form": form})
-
