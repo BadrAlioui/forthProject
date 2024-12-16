@@ -51,19 +51,19 @@ Here are some screenshots of the application:
 
 ### Home Page
 
-![Home Page](https://github.com/BadrAlioui/forthProject/blob/master/media/home-presentation.png?raw=true)
+![Home Page](https://github.com/BadrAlioui/forthProject/blob/master/media/images/home-presentation.png?raw=true)
 
 ### Reservation Page
 
-![Reservation Page](https://github.com/BadrAlioui/forthProject/blob/master/media/reservation_page.png?raw=true)
+![Reservation Page](https://github.com/BadrAlioui/forthProject/blob/master/media/images/reservation_page.png?raw=true)
 
 ### Reservation List
 
-![Reservation List](https://github.com/BadrAlioui/forthProject/blob/master/media/reservation_list_page.png?raw=true)
+![Reservation List](https://github.com/BadrAlioui/forthProject/blob/master/media/images/reservation_list_page.png?raw=true)
 
 ### Contact Page
 
-![Contact Page](https://github.com/BadrAlioui/forthProject/blob/master/media/contact_presentation_page.png?raw=true)
+![Contact Page](https://github.com/BadrAlioui/forthProject/blob/master/media/images/contact_presentation_page.png?raw=true)
 
 ## Validator Testing
 
@@ -73,46 +73,46 @@ Here are some screenshots of the application:
 
 -page signup:
 
-![signup validator](https://github.com/BadrAlioui/forthProject/blob/master/media/signup_validator.png?raw=true)
+![signup validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/signup_validator.png?raw=true)
 
 -page reservation:
 
-![reservation validator](https://github.com/BadrAlioui/forthProject/blob/master/media/reservation_validator.png?raw=true)
+![reservation validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/reservation_validator.png?raw=true)
 
 -page list of reservation:
 
-![reservation_list validator](https://github.com/BadrAlioui/forthProject/blob/master/media/reservation_list_validator.png?raw=true)
+![reservation_list validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/reservation_list_validator.png?raw=true)
 
 -menu page:
 
-![menu_page validator](https://github.com/BadrAlioui/forthProject/blob/master/media/menu_page_validator.png?raw=true)
+![menu_page validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/menu_page_validator.png?raw=true)
 
 -login page:
 
-![login validator](https://github.com/BadrAlioui/forthProject/blob/master/media/login_page_validator.png?raw=true)
+![login validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/login_page_validator.png?raw=true)
 
 -home page:
 
-![home_page validator](https://github.com/BadrAlioui/forthProject/blob/master/media/home_page_validator.png?raw=true)
+![home_page validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/home_page_validator.png?raw=true)
 
 -Edit reservation:
 
-![edir_reservation validator](https://github.com/BadrAlioui/forthProject/blob/master/media/edit_reservation_validator.png?raw=true)
+![edir_reservation validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/edit_reservation_validator.png?raw=true)
 
 -contact page:
 
-![contact validator](https://github.com/BadrAlioui/forthProject/blob/master/media/contact_page_validator.png?raw=true)
+![contact validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/contact_page_validator.png?raw=true)
 **CSS Validation**:
 
 -   All CSS files passed without errors:
 
 -   css validator in styles.css:
 
-![css validator](https://github.com/BadrAlioui/forthProject/blob/master/media/css_validator.png?raw=true)
+![css validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/css_validator.png?raw=true)
 
 **JavaScript Validation**:
 
-![Javascript validator](https://github.com/BadrAlioui/forthProject/blob/master/media/javascript_validator.png?raw=true)
+![Javascript validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/javascript_validator.png?raw=true)
 
 **Python Validation**:
 
@@ -120,51 +120,51 @@ Here are some screenshots of the application:
 
 -Reservation Views:
 
-![reservation_views validator](https://github.com/BadrAlioui/forthProject/blob/master/media/view_reservation.png?raw=true)
+![reservation_views validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/view_reservation.png?raw=true)
 
 -Reservation Urls:
 
-![reservation_urls validator](https://github.com/BadrAlioui/forthProject/blob/master/media/reservation_urls.png?raw=true)
+![reservation_urls validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/reservation_urls.png?raw=true)
 
 -Reservation Models:
 
-![reservation_urls validator](https://github.com/BadrAlioui/forthProject/blob/master/media/reservation_model.png?raw=true)
+![reservation_urls validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/reservation_model.png?raw=true)
 
 -Reservation Forms:
 
-![reservation_forms validator](https://github.com/BadrAlioui/forthProject/blob/master/media/reservation_form.png?raw=true)
+![reservation_forms validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/reservation_form.png?raw=true)
 
 **_Mysite_**
 
 -Mysite Views:
 
-![mysite_views validator](https://github.com/BadrAlioui/forthProject/blob/master/media/mysite_view.png?raw=true)
+![mysite_views validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/mysite_view.png?raw=true)
 
 -Mysite Urls:
 
-![mysite_urls validator](https://github.com/BadrAlioui/forthProject/blob/master/media/mysite_urls.png?raw=true)
+![mysite_urls validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/mysite_urls.png?raw=true)
 
 -Mysite Forms:
 
-![mysite_forms validator](https://github.com/BadrAlioui/forthProject/blob/master/media/mysite_forms.png?raw=true)
+![mysite_forms validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/mysite_forms.png?raw=true)
 
 **_Menu_**
 
 -Menu Views:
 
-![menu_views validator](https://github.com/BadrAlioui/forthProject/blob/master/media/menu_views.png?raw=true)
+![menu_views validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/menu_views.png?raw=true)
 
 -Menu Forms:
 
-![menu_forms validator](https://github.com/BadrAlioui/forthProject/blob/master/media/media_forms.png?raw=true)
+![menu_forms validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/media/images_forms.png?raw=true)
 
 -Menu Urls:
 
-![menu_urls validator](https://github.com/BadrAlioui/forthProject/blob/master/media/media_urls.png?raw=true)
+![menu_urls validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/media/images_urls.png?raw=true)
 
 -Menu Models:
 
-![menu_models validator](https://github.com/BadrAlioui/forthProject/blob/master/media/media_models.png?raw=true)
+![menu_models validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/media/images_models.png?raw=true)
 
 ## Accessibility
 
@@ -172,11 +172,11 @@ We are committed to ensuring accessibility for all users. Our platform has been 
 
 **Accessibility Mobile**
 
-![Accessibility Mobile](https://github.com/BadrAlioui/forthProject/blob/master/media/mobile_accessibility.png?raw=true)
+![Accessibility Mobile](https://github.com/BadrAlioui/forthProject/blob/master/media/images/mobile_accessibility.png?raw=true)
 
 **Accessibility Desktop**
 
-![Accessibility Desktop](https://github.com/BadrAlioui/forthProject/blob/master/media/desktop_accessibility.png?raw=true)
+![Accessibility Desktop](https://github.com/BadrAlioui/forthProject/blob/master/media/images/desktop_accessibility.png?raw=true)
 
 ## Manual Testing:
 
@@ -197,7 +197,7 @@ Using the `coverage.py` tool, I measured the test coverage of the project. The r
 | Forms     | 100%     |
 | Overall   | 96%      |
 
-![coverage report](https://github.com/BadrAlioui/forthProject/blob/master/media/coverage.png)
+![coverage report](https://github.com/BadrAlioui/forthProject/blob/master/media/images/coverage.png)
 
 ### Helpful Resources
 
@@ -207,9 +207,9 @@ The course [Unit Testing in Django](https://netninja.dev/courses/unit-testing-in
 
 #### Home Page
 
-![wireframe home_page](https://github.com/BadrAlioui/forthProject/blob/master/media/images/wireframe_mobile.png)
+![wireframe home_page](https://github.com/BadrAlioui/forthProject/blob/master/media/images/images/wireframe_mobile.png)
 
-![wireframe home_page](https://github.com/BadrAlioui/forthProject/blob/master/media/images/wireframe_home_page_desktop.png)
+![wireframe home_page](https://github.com/BadrAlioui/forthProject/blob/master/media/images/images/wireframe_home_page_desktop.png)
 
 ## Deployment
 
