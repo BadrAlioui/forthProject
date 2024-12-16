@@ -1,13 +1,19 @@
-{% extends 'template_base.html' %}
-
-{% block content %}
-<div id="container" class="home-page px-3 ms-5 mt-5 h-100  text-start">
-    <h1 class="display-3 text-white text-start">Let's <span class="text-primary">enjoy</span>.</h1>
-    <p class="lead fw-bolder w-25 text-white text-start">
-        We bring over 30 years of industry experience and passion to Moroc. With dishes that are carefully designed to bring you a truly satisfying Moroccan food experience that you are sure to remember.
+{% extends 'template_base.html' %} {% block content %}
+<div id="container" class="home-page px-3 ms-5 mt-5 h-100 text-center">
+    <h1 class="display-3 text-white text-center">
+        Let's <span class="text-primary">enjoy</span>.
+    </h1>
+    <p class="lead fw-bolder text-white text-cetner my-4">
+        We bring over 30 years of industry experience and passion to Moroc. With
+        dishes that are carefully designed to bring you a truly satisfying
+        Moroccan food experience that you are sure to remember.
     </p>
-    <p class="lead text-start">
-        <a href="{% url 'reservations:reservations' %}" class="fs-5 fw-bold btn btn-light bg-primary text-white" style="padding: 15px 30px; border-radius: 5px;">
+    <p class="lead text-center mb-0">
+        <a
+            href="{% url 'reservations:reservations' %}"
+            class="fs-5 fw-bold btn btn-light bg-primary text-white"
+            style="padding: 15px 30px; border-radius: 5px"
+        >
             MAKE A RESERVATION
         </a>
     </p>
