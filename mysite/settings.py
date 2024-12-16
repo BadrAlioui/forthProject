@@ -37,8 +37,19 @@ INSTALLED_APPS = [
     
     'menus',
     'reservations',
+    'cloudinary',
+    'cloudinary_storage',
     
 ]
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dbi9dhanq',
+    'API_KEY': '778114457955977',
+    'API_SECRET': 'GytK3sofNmLZxc3ma8w8rZ-gTDk',
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
 
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
@@ -144,16 +155,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),  
 ]
 
 
+
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 
 

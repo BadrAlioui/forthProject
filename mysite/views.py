@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import ContactForm
+from django.contrib import messages
 from django.core.mail import send_mail
 
 
@@ -24,5 +25,6 @@ def contact_page(request):
                 ["studentinstitute2024@gmail.com"],
                 fail_silently=False,
             )
-            return HttpResponse('Thanks for your message')
+            messages.success(request, "Your message has been sent successfully!")
+            return redirect('contact')
     return render(request, 'contact.html', {'form': form})

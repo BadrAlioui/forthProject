@@ -16,7 +16,7 @@ class MenuFormTest(TestCase):
         admin_user = User.objects.create_superuser(username='admin', password='admin123')
         self.client.login(username='admin', password='admin123')
 
-        # Send a POST request with valid data
+        
         response = self.client.post(reverse('menus:create'), data=form_data)
 
         # Check the redirection after success
@@ -39,10 +39,10 @@ class MenuFormTest(TestCase):
 
         # Analyze the form to validate the errors
         form = response.context['form']
-        self.assertFalse(form.is_valid())  # The form should be invalid
-        self.assertIn('title', form.errors)  # The 'title' field should have an error
-        self.assertIn('slug', form.errors)  # The 'slug' field should have an error
-        self.assertIn('price', form.errors)  # The 'price' field should have an error
+        self.assertFalse(form.is_valid())  
+        self.assertIn('title', form.errors)  
+        self.assertIn('slug', form.errors)  
+        self.assertIn('price', form.errors) 
 
         # Check that no object was created in the database
         self.assertFalse(Menu.objects.exists())

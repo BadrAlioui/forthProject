@@ -6,3 +6,6 @@ __pycache__/
 # Exclude virtual environment (if applicable)
 venv/
 
+staticfiles/
+
+
