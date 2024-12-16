@@ -156,7 +156,7 @@ Here are some screenshots of the application:
 
 -Menu Urls:
 
-![menu_urls validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/media/menu_urls.png)
+![menu_urls validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/menu_urls.png)
 
 -Menu Models:
 
