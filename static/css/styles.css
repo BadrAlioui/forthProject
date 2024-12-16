@@ -121,6 +121,14 @@ form {
     margin-bottom: 45px;
 }
 
+main .menu-detail-page {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+main .black-transparent-article {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 /* Les boutons doivent aussi être contenus dans le cadre */
 button {
     margin-top: 20px;

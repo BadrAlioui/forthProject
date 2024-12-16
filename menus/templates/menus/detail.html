@@ -1,14 +1,18 @@
-{% extends 'template_base.html' %}
-{% load static %}
-{% block content %}
+{% extends 'template_base.html' %} {% load static %} {% block content %}
 
 <div class="container menu-detail-page my-5 text-white">
-    <div class="row">
-        <div class="col-md-6">
-            <img src="{{ menu.image.url }}" alt="{{ menu.title }}" class="img-fluid rounded-start shadow">
+    <div class="row white-smoke">
+        <div class="col-md-6 p-0">
+            <img
+                src="{{ menu.image.url }}"
+                alt="{{ menu.title }}"
+                class="img-fluid rounded-start shadow"
+            />
         </div>
-        <div class="col-md-6 d-flex flex-column justify-content-center text-center">
-            <h1 class="display-4 text-primary">{{ menu.title }}</h1>
+        <div
+            class="col-md-6 d-flex flex-column justify-content-center text-center black-transparent-article"
+        >
+            <h1 class="display-4">{{ menu.title }}</h1>
             <p class="lead">{{ menu.content }}</p>
         </div>
         <div class="text-center mt-5">
