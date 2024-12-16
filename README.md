@@ -20,10 +20,6 @@ This project uses basic web technologies:
 -   **Django**: For back-end and data management.
 -   **JavaScript**: For interactive features.
 
-### Wireframes
-
-##### Home page
-
 ## Key Features
 
 -   **Easy Reservations**: Users can select the date, time, and number of people for their booking.
