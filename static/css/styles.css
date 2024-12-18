@@ -1,6 +1,7 @@
 /* Style global */
 html,
 body {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
@@ -9,7 +10,7 @@ body {
     background-image: url('/media/images/couscous.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 150%;
+    background-size: cover;
     background-position: center;
     overflow-x: hidden;
     display: flex;
@@ -18,7 +19,9 @@ body {
 
 main {
     flex-grow: 1;
-    margin-bottom: 20px;
+    margin:0;
+    padding: 0;
+    
 }
 
 main .home-page {
@@ -26,21 +29,24 @@ main .home-page {
 }
 
 #container {
-    margin-right: auto;
+    margin-left: 50px;
+    margin-top: 45px;
     width: 33%;
 }
 /* Navigation et pied de page */
 .navbar,
 footer {
+    flex-shrink: 0;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
 .navbar-nav {
+    flex-shrink: ;
     margin-left: auto !important;
 }
 
 footer {
-    flex-shrink: 0;
+    
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -93,7 +99,7 @@ h1 {
 
 @media (max-width: 768px) {
     #container {
-        margin: auto;
+        margin: 30px auto;
         width: 80%;
     }
 }
