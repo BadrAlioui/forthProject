@@ -16,6 +16,14 @@ body {
     flex-direction: column;
 }
 
+.moroc-logo img {
+    height: 55px;
+    width: auto;
+
+    margin-left: ;
+    margin-top: -5px;
+}
+
 main {
     flex-grow: 1;
     margin: 0;
