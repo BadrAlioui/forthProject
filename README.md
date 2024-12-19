@@ -205,6 +205,8 @@ The course [Unit Testing in Django](https://netninja.dev/courses/unit-testing-in
 
 ![wireframe home_page](https://github.com/BadrAlioui/forthProject/blob/master/media/images/wireframes.png)
 
+##### User flows
+
 ![user flows](https://github.com/BadrAlioui/forthProject/blob/master/media/images/User-flow.png)
 
 ## Deployment
