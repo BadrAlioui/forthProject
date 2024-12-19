@@ -207,6 +207,8 @@ The course [Unit Testing in Django](https://netninja.dev/courses/unit-testing-in
 
 ![wireframe home_page](https://github.com/BadrAlioui/forthProject/blob/master/media/images/wireframe_home_page_desktop.png)
 
+![user flows](https://github.com/BadrAlioui/forthProject/blob/master/media/images/User-flow.png)
+
 ## Deployment
 
 The booking system is hosted on Heroku. To deploy your own version:

@@ -10,7 +10,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 150%;
-    background-position: center;
+    background-position:center;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
@@ -65,7 +65,7 @@ footer a {
     width: 90%;
 }
 
-/* Titres globaux */
+/* Title */
 h1 {
     color: #fff;
     text-align: center;
@@ -86,16 +86,29 @@ h1 {
         font-size: 3rem;
         #container {
             margin: auto;
-            width: 50%;
+            width: 70%;
         }
     }
 }
 
 @media (max-width: 768px) {
-    #container {
-        margin: auto;
-        width: 80%;
+    html, body{
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
     }
+
+    #container{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .navbar{
+        padding: 0;
+    }
+    #container .home-page {
+        margin: 0 auto;        
+        width:85%;
 }
 
 /* Formulaires globaux */
