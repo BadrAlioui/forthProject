@@ -1,7 +1,6 @@
 /* Style global */
 html,
 body {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
@@ -10,13 +9,8 @@ body {
     background-image: url('/media/images/couscous.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
-<<<<<<< HEAD
-    background-size: 150%;
-    background-position:center;
-=======
     background-size: cover;
     background-position: center;
->>>>>>> a59727d94820792e7835c39ccefb893ee2fdd4c4
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
@@ -24,34 +18,35 @@ body {
 
 main {
     flex-grow: 1;
-    margin:0;
+    margin: 0;
     padding: 0;
-    
 }
 
-main .home-page {
+main .black-transparent-article {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+main .white-smoke {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
 #container {
+    margin-top: 30px;
     margin-left: 50px;
-    margin-top: 45px;
     width: 33%;
 }
 /* Navigation et pied de page */
 .navbar,
 footer {
-    flex-shrink: 0;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
 .navbar-nav {
-    flex-shrink: ;
     margin-left: auto !important;
 }
 
 footer {
-    
+    flex-shrink: 0;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -103,141 +98,125 @@ h1 {
 }
 
 @media (max-width: 768px) {
-<<<<<<< HEAD
-    html, body{
-        background-size: cover;
-        background-position: center;
-        background-attachment: scroll;
-=======
-    #container {
-        margin: 30px auto;
-        width: 80%;
->>>>>>> a59727d94820792e7835c39ccefb893ee2fdd4c4
-    }
-
-    #container{
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
-    .navbar{
+    .navbar {
         padding: 0;
     }
-    #container .home-page {
-        margin: 0 auto;        
-        width:85%;
-}
+    #container {
+        margin: 30px auto;
+        width: 85%;
+    }
 
-/* Formulaires globaux */
-form {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 30px;
-    border-radius: 15px;
-    max-width: 600px;
-    margin: 0 auto;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-    box-sizing: border-box;
-}
+    /* Formulaires globaux */
+    form {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 30px;
+        border-radius: 15px;
+        max-width: 600px;
+        margin: 0 auto;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
 
-.form-group {
-    margin-bottom: 15px;
-}
+    .form-group {
+        margin-bottom: 15px;
+    }
 
-.form-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
+    .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
 
-.form-control {
-    width: 100%;
-    padding: 10px;
-    font-size: 1em;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-.form1 {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 30px;
-    border-radius: 15px;
-    max-width: 600px;
-    margin: 0 auto;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-    margin-bottom: 45px;
-}
-
-main .menu-detail-page {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-main .black-transparent-article {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Les boutons doivent aussi être contenus dans le cadre */
-button {
-    margin-top: 20px;
-    width: 100%;
-    padding: 10px;
-    font-size: 1em;
-    background-color: #007bff;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-/* Page des réservations */
-.reservations-page .content-container {
-    max-width: 600px;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-    width: 90%;
-}
-
-.reservations-page h1 {
-    color: #fff;
-}
-
-.reservations-page .form-control {
-    padding: 10px;
-    font-size: 1em;
-    border-radius: 5px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* Ajout pour la réactivité sur la page de réservation */
-@media screen and (max-width: 576px) {
-    .reservations-page .content-container {
+    .form-control {
+        width: 100%;
         padding: 10px;
-        max-width: 100%;
+        font-size: 1em;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    .form1 {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 30px;
+        border-radius: 15px;
+        max-width: 600px;
+        margin: 0 auto;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+        margin-bottom: 45px;
+    }
+
+    main .menu-detail-page {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    main .black-transparent-article {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Les boutons doivent aussi être contenus dans le cadre */
+    button {
+        margin-top: 20px;
+        width: 100%;
+        padding: 10px;
+        font-size: 1em;
+        background-color: #007bff;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    /* Page des réservations */
+    .reservations-page .content-container {
+        max-width: 600px;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+        width: 90%;
     }
 
     .reservations-page h1 {
-        font-size: 2rem;
+        color: #fff;
     }
 
-    form {
-        padding: 20px;
-        max-width: 100%;
+    .reservations-page .form-control {
+        padding: 10px;
+        font-size: 1em;
+        border-radius: 5px;
+        width: 100%;
+        box-sizing: border-box;
     }
-}
 
-@media (min-width: 1440px) {
-    .reservations-page .content-container {
-        max-width: 50%;
+    /* Ajout pour la réactivité sur la page de réservation */
+    @media screen and (max-width: 576px) {
+        .reservations-page .content-container {
+            padding: 10px;
+            max-width: 100%;
+        }
+
+        .reservations-page h1 {
+            font-size: 2rem;
+        }
+
+        form {
+            padding: 20px;
+            max-width: 100%;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        .reservations-page .content-container {
+            max-width: 50%;
+        }
     }
 }
