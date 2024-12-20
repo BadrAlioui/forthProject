@@ -47,7 +47,7 @@ Here are some screenshots of the application:
 
 ### Home Page
 
-![Home Page](https://github.com/BadrAlioui/forthProject/blob/master/static/images/home-presentation.png?raw=true)
+![Home Page](https://github.com/BadrAlioui/forthProject/blob/master/static/images/home-page-presentation.png)
 
 ### Reservation Page
 
