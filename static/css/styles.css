@@ -150,10 +150,10 @@ main .black-transparent-article {
 @media (min-width: 768px) {
     h1 {
         font-size: 3rem;
-    }
-    #container {
-        margin: auto;
-        width: 70%;
+        #container {
+            margin-right: 50px;
+            width: 33%;
+        }
     }
 }
 
