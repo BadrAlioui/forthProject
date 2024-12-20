@@ -19,8 +19,6 @@ body {
 .moroc-logo img {
     height: 55px;
     width: auto;
-
-    margin-left: ;
     margin-top: -5px;
 }
 
@@ -152,10 +150,10 @@ main .black-transparent-article {
 @media (min-width: 768px) {
     h1 {
         font-size: 3rem;
-        #container {
-            margin: auto;
-            width: 70%;
-        }
+    }
+    #container {
+        margin: auto;
+        width: 70%;
     }
 }
 
