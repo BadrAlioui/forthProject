@@ -168,11 +168,11 @@ We are committed to ensuring accessibility for all users. Our platform has been 
 
 **Accessibility Mobile**
 
-![Accessibility Mobile](https://github.com/BadrAlioui/forthProject/blob/master/media/images/)
+![Accessibility Mobile](https://github.com/BadrAlioui/forthProject/blob/master/media/images/mobile_accessibility.png)
 
 **Accessibility Desktop**
 
-![Accessibility Desktop](https://github.com/BadrAlioui/forthProject/blob/master/media/images)
+![Accessibility Desktop](https://github.com/BadrAlioui/forthProject/blob/master/media/images/desktop_accessibility.png)
 
 ## Manual Testing:
 
