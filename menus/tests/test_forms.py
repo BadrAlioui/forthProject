@@ -2,16 +2,23 @@ from django.test import TestCase
 from django.urls import reverse
 from menus.models import Menu
 from django.contrib.auth.models import User
+from django.core.files.uploadedfile import SimpleUploadedFile
+
+with open(r'C:\Users\badralil\Desktop\forthProject\media\images\couscous.jpg', 'rb') as img:
+    image = SimpleUploadedFile(name='test_image.jpg',
+                                   content = img.read(),
+                                   content_type='image/jpeg')
 
 # https://www.youtube.com/watch?v=RR7wANxu5gk&t=310s
 class MenuFormTest(TestCase):
     def test_menu_form_valid_data(self):
+        
         form_data = {
             'title': 'Menu Test',
             'content': 'Example for the test.',
             'slug': 'menu-test',
             'price': 10.00,
-            'image': 'default.png'
+            'image': image,
         }
         admin_user = User.objects.create_superuser(username='admin', password='admin123')
         self.client.login(username='admin', password='admin123')

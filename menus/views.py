@@ -24,14 +24,14 @@ def menu_page(request, slug):
 def create_menu(request):
     if request.method == "POST":
         form = MenuForm(request.POST, request.FILES)
-        if form.is_valid():  # Vérifie si le formulaire est valide
+        if form.is_valid():
             form.save()
             messages.success(request, "Menu created successfully!")
-            return HttpResponseRedirect('/menus/')  # Redirection après succès
+            return HttpResponseRedirect('/menus/')  
         else:
             messages.error(request, "Error. Please check your inputs")
             # Retourne le formulaire avec les erreurs
             return render(request, "menus/create.html", context={"form": form})
     else:
-        form = MenuForm()  # Formulaire vide pour une requête GET
+        form = MenuForm()
     return render(request, "menus/create.html", context={"form": form})
