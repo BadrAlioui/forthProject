@@ -8,12 +8,14 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-
+#https://www.youtube.com/watch?v=fQo9ivqX4xs
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 SECRET_KEY = config('SECRET_KEY')
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['your-heroku-app.herokuapp.com', 'localhost']
 
@@ -37,6 +39,7 @@ INSTALLED_APPS = [
     
     'menus',
     'reservations',
+    'cloudinary'
     
 ]
 
@@ -173,3 +176,14 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 
 django_heroku.settings(locals())
+
+
+# Cloudinary -Django integration
+
+cloudinary.config(
+    cloud_name = "dbi9dhanq",
+    api_key = "778114457955977",
+    api_secret = "GytK3sofNmLZxc3ma8w8rZ-gTDk",
+
+
+)
