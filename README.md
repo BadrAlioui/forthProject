@@ -273,7 +273,6 @@ You can access the user stories, organized by different levels of priority, here
 
 ## Future Enhancements
 
--   **Filtering Feature**: Possibility to add menus.
 -   **Online Payment**: Not available for now, but could be added later.
 -   **Comments**: Add a feature comment about restaurant.
 -   **Add a notification**: This is would make communication faster and ensure the restaurant can respond to users quickly.
