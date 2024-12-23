@@ -1,5 +1,7 @@
 # Restaurant Booking System
 
+![Home Page](https://github.com/BadrAlioui/forthProject/blob/master/media/images/home-page-presentation.png)
+
 ## About The Project
 
 The Restaurant Booking System is a web application that allows users to easily book tables. Our goal is to make the reservation process simple and provide a good experience for users.
@@ -47,10 +49,6 @@ This project uses basic web technologies:
 ## Screenshots
 
 Here are some screenshots of the application:
-
-### Home Page
-
-![Home Page](https://github.com/BadrAlioui/forthProject/blob/master/media/images/home-page-presentation.png)
 
 ### Reservation Page
 
