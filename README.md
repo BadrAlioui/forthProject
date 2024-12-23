@@ -24,6 +24,8 @@ This project uses basic web technologies:
 ## Key Features
 
 -   **Easy Reservations**: Users can select the date, time, and number of people for their booking.
+-   **Admin-Only Menu Creation**: Only the administrator can add new menus to ensure everything stays consistent and accurate.
+-   **Login Required for Reservations**: Users need to log in to book, edit, or cancel a table reservation.
 -   **Message Confirmation**: Users receive a confirmation message after making a reservation.
 -   **Reservation Management**: Users can cancel or change their reservations easily.
 -   **Responsive Design**: Ensures a smooth experience on mobile and desktop.
