@@ -287,6 +287,11 @@ You can access the user stories, organized by different levels of priority, here
 -   **Tooltips and Other Bootstrap Features**: Inspired by the course [Bootstrap 5 - The Ultimate Training](https://www.udemy.com/course/bootstrap-5-la-formation-ultime/) on Udemy.
 -   **Contact Page Creation**: Based on the tutorial from [GeeksforGeeks](https://www.geeksforgeeks.org/create-a-contact-form-using-html-css-javascript/).
 
+### Features for the future
+
+A great addition to this booking system would be a notification feature. For example,
+the sytem could send an alert to the restaurant whenever a client makes a reservstion. This is would make communication faster and ensure the restaurant can respond to users quickly.
+
 ## Acknowledgements
 
 -   My Mentor Rahul for his ongoing support and feedback
