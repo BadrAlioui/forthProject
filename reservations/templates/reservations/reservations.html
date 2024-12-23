@@ -3,7 +3,7 @@
 <div class="reservations-page my-4">
     <h1>Make a Reservation</h1>
 
-    {% if reservations %}
+    <!-- {% if reservations %}
     <ul>
         {% for reservation in reservations %}
         <li>
@@ -14,7 +14,7 @@
     </ul>
     {% else %}
     <p class="text-muted">No reservations found.</p>
-    {% endif %}
+    {% endif %} -->
 
     <form action="{% url 'reservations:liste' %}" method="POST">
         {% csrf_token %}
