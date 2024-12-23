@@ -67,6 +67,17 @@ footer a {
     font-size: 1.5em;
 }
 
+/*icon*/
+
+.icon a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.icon a:hover {
+    color: #ddd;
+}
+
 /* Conteneur avec fond blanc semi-transparent pour toutes les pages */
 .content-container {
     max-width: 1200px;
