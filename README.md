@@ -264,7 +264,7 @@ You can access the user stories, organized by different levels of priority, here
 
 ## Bug Fixes
 
-1. **Image Loading Issues**: Modified the path to access images using relative or absolute paths to fix image loading issues.
+1. **Image Loading Issues**: Added Cloudinary to prevent images from disappearing after each deployment.
 2. **Reservation Past Date Bug**: Added validation to prevent users from making reservations for past dates.
 3. **CSS Issues**: Consolidated all CSS into `styles.css` to avoid confusion caused by inline styles.
 
