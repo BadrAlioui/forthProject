@@ -232,9 +232,13 @@ Heroku is a cloud platform service that enables developers to build, run, and op
 
 ALLOWED_HOSTS = ['your-heroku-app.herokuapp.com', 'localhost']
 
-##### 2. Set `Debug = False`:
+##### 2. Set `Debug = False` for production:
 
 It is important to turn off debug mode before deploying to ensure the app is secure and runs efficiently.
+
+##### 3. Error Handling:
+
+With Debug = False, Django will serve custom error pages(e.g., 404 or 400 pages) instead of showing technical debug information.
 
 You can access the live version here: [Restaurant Booking System](https://quiet-crag-61811-4fb808af66c6.herokuapp.com/)
 
