@@ -275,7 +275,8 @@ You can access the user stories, organized by different levels of priority, here
 
 -   **Filtering Feature**: Possibility to add menus.
 -   **Online Payment**: Not available for now, but could be added later.
--   **Comments or Contact**: Add a feature contact about restaurant.
+-   **Comments**: Add a feature comment about restaurant.
+-   **Add a notification**: This is would make communication faster and ensure the restaurant can respond to users quickly.
 
 ## References
 
@@ -289,11 +290,6 @@ You can access the user stories, organized by different levels of priority, here
 -   **Adding Menus**: Learned from the course [Python Django - Full Stack Web Developer Training](https://www.udemy.com/course/python-django-formation-developpeur-web-full-stack/) on Udemy.
 -   **Tooltips and Other Bootstrap Features**: Inspired by the course [Bootstrap 5 - The Ultimate Training](https://www.udemy.com/course/bootstrap-5-la-formation-ultime/) on Udemy.
 -   **Contact Page Creation**: Based on the tutorial from [GeeksforGeeks](https://www.geeksforgeeks.org/create-a-contact-form-using-html-css-javascript/).
-
-### Features for the future
-
-A great addition to this booking system would be a notification feature. For example,
-the sytem could send an alert to the restaurant whenever a client makes a reservstion. This is would make communication faster and ensure the restaurant can respond to users quickly.
 
 ## Acknowledgements
 
