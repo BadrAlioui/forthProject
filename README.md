@@ -229,6 +229,10 @@ Heroku is a cloud platform service that enables developers to build, run, and op
 
 ALLOWED_HOSTS = ['your-heroku-app.herokuapp.com', 'localhost']
 
+##### 2. Set `Debug = False`:
+
+It is important to turn off debug mode before deploying to ensure the app is secure and runs efficiently.
+
 You can access the live version here: [Restaurant Booking System](https://quiet-crag-61811-4fb808af66c6.herokuapp.com/)
 
 ## User Stories
