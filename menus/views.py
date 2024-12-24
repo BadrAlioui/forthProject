@@ -29,7 +29,7 @@ def create_menu(request):
             messages.success(request, "Menu created successfully!")
             return HttpResponseRedirect('/menus/')  
         else:
-            messages.error(request, "Error. Please check your inputs")
+            messages.error(request, "Error. Please check your inputs.")
             # Retourne le formulaire avec les erreurs
             return render(request, "menus/create.html", context={"form": form})
     else:
