@@ -3,6 +3,7 @@ from django.utils.timezone import now
 from django.core.exceptions import ValidationError
 from django.contrib.auth.models import User
 
+
 class Reservation(models.Model):
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, null=True, blank=True
@@ -31,19 +32,23 @@ class Reservation(models.Model):
             last_name=self.last_name,
             date_booking=self.date_booking
         ).exclude(pk=self.pk).exists():
-            raise ValidationError("You have already booked a table for this date!")
+            raise ValidationError(
+                "You have already booked a table for this date!")
 
         # Vérifier que number_of_persons est défini et valide
         if self.number_of_persons is None:
             raise ValidationError("The number of persons is required.")
 
         if self.number_of_persons <= 0:
-            raise ValidationError("The number of persons must be greater than 0.")
+            raise ValidationError(
+                "The number of persons must be greater than 0."
+                )
 
         # Calculer le total des réservations en excluant l'instance actuelle
         total_persons = Reservation.objects.filter(
             date_booking=self.date_booking
-        ).exclude(pk=self.pk).aggregate(total=models.Sum('number_of_persons'))['total'] or 0
+        ).exclude(pk=self.pk).aggregate(total=models.Sum(
+            'number_of_persons'))['total'] or 0
 
         # Vérifier la capacité maximale
         if total_persons + self.number_of_persons > 15:
