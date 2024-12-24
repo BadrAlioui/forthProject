@@ -285,6 +285,7 @@ You can access the user stories, organized by different levels of priority, here
 -   **Online Payment**: Not available for now, but could be added later.
 -   **Comments**: Add a feature to allow user comments about the restaurant.
 -   **Add a notification**: This is would make communication faster and ensure the restaurant can respond to users quickly.
+-   **Add Opening and Closing Hours**: To let users know when the restaurant is open and when they can make reservations.
 
 ## References
 

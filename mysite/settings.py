@@ -15,7 +15,7 @@ import cloudinary.api
 
 SECRET_KEY = config('SECRET_KEY')
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['your-heroku-app.herokuapp.com', 'localhost']
 
