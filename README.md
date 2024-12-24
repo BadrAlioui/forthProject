@@ -172,7 +172,7 @@ Here are some screenshots of the application:
 
 ## Accessibility
 
-We are committed to ensuring accessibility for all users. Our platform has been tested to provide an inclusive user experience.
+We are committed to ensuring accessibility for all users. Our platform has been tested, with Lighthouse, to provide an inclusive user experience.
 
 **Accessibility Mobile**
 
