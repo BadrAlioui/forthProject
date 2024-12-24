@@ -243,7 +243,7 @@ It is important to turn off debug mode before deploying to ensure the app is sec
 
 ##### 3. Error Handling:
 
-With Debug = False, Django will serve custom error pages(e.g., 404 or 400 pages) instead of showing technical debug information.
+With Debug = False, Django will serve custom error pages(e.g., 404 or 500 pages) instead of showing technical debug information.
 
 You can access the live version here: [Restaurant Booking System](https://quiet-crag-61811-4fb808af66c6.herokuapp.com/)
 
