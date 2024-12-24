@@ -152,6 +152,14 @@ main .black-transparent-article {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* error handling */
+
+.page-error {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
 @media (max-width: 576px) {
     h1 {
         font-size: 2rem;
