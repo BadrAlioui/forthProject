@@ -4,7 +4,7 @@
 
 ## About The Project
 
-The Restaurant Booking System is a web application that allows users to easily book tables. Our goal is to make the reservation process simple and provide a good experience for users.
+The Restaurant Booking System is a web application that allows users to easily book tables. Our goal is to simplify reservations and user experience.
 
 ## Objectives
 
@@ -31,6 +31,13 @@ This project uses basic web technologies:
 -   **Message Confirmation**: Users receive a confirmation message after making a reservation.
 -   **Reservation Management**: Users can cancel or change their reservations easily.
 -   **Responsive Design**: Ensures a smooth experience on mobile and desktop.
+
+### Authentication
+
+This project uses Django's built-in authentication system to let users log in and log out.
+When logged in, users can access features like managing their reservations or viewing personalized content.
+Logging out securely ends the user session.
+Django's authentication makes it easy to handle these features while keeping everything secure and reliable.
 
 ## Getting Started
 
@@ -64,7 +71,7 @@ Here are some screenshots of the application:
 
 ## Validator Testing
 
-**HTML Validation**:
+**HTML Validation (W3C Validator)**:
 
 -   No errors or warnings on all pages.
 
@@ -276,7 +283,7 @@ You can access the user stories, organized by different levels of priority, here
 ## Future Enhancements
 
 -   **Online Payment**: Not available for now, but could be added later.
--   **Comments**: Add a feature comment about restaurant.
+-   **Comments**: Add a feature to allow user comments about the restaurant.
 -   **Add a notification**: This is would make communication faster and ensure the restaurant can respond to users quickly.
 
 ## References
