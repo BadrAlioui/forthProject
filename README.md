@@ -4,7 +4,7 @@
 
 ## About The Project
 
-The Restaurant Booking System is a web application that allows users to easily book tables. Our goal is to make the reservation process simple and provide a good experience for users.
+The Restaurant Booking System is a web application that allows users to easily book tables. Our goal is to simplify reservations and user experience.
 
 ## Objectives
 
@@ -31,6 +31,13 @@ This project uses basic web technologies:
 -   **Message Confirmation**: Users receive a confirmation message after making a reservation.
 -   **Reservation Management**: Users can cancel or change their reservations easily.
 -   **Responsive Design**: Ensures a smooth experience on mobile and desktop.
+
+### Authentication
+
+This project uses Django's built-in authentication system to let users log in and log out.
+When logged in, users can access features like managing their reservations or viewing personalized content.
+Logging out securely ends the user session.
+Django's authentication makes it easy to handle these features while keeping everything secure and reliable.
 
 ## Getting Started
 
@@ -64,7 +71,7 @@ Here are some screenshots of the application:
 
 ## Validator Testing
 
-**HTML Validation**:
+**HTML Validation (W3C Validator)**:
 
 -   No errors or warnings on all pages.
 
@@ -165,7 +172,7 @@ Here are some screenshots of the application:
 
 ## Accessibility
 
-We are committed to ensuring accessibility for all users. Our platform has been tested to provide an inclusive user experience.
+We are committed to ensuring accessibility for all users. Our platform has been tested, with Lighthouse, to provide an inclusive user experience.
 
 **Accessibility Mobile**
 
@@ -236,7 +243,7 @@ It is important to turn off debug mode before deploying to ensure the app is sec
 
 ##### 3. Error Handling:
 
-With Debug = False, Django will serve custom error pages(e.g., 404 or 400 pages) instead of showing technical debug information.
+With Debug = False, Django will serve custom error pages(e.g., 404 or 500 pages) instead of showing technical debug information.
 
 You can access the live version here: [Restaurant Booking System](https://quiet-crag-61811-4fb808af66c6.herokuapp.com/)
 
@@ -276,8 +283,9 @@ You can access the user stories, organized by different levels of priority, here
 ## Future Enhancements
 
 -   **Online Payment**: Not available for now, but could be added later.
--   **Comments**: Add a feature comment about restaurant.
+-   **Comments**: Add a feature to allow user comments about the restaurant.
 -   **Add a notification**: This is would make communication faster and ensure the restaurant can respond to users quickly.
+-   **Add Opening and Closing Hours**: To let users know when the restaurant is open and when they can make reservations.
 
 ## References
 

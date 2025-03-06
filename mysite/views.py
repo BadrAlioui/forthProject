@@ -25,6 +25,7 @@ def contact_page(request):
                 ["studentinstitute2024@gmail.com"],
                 fail_silently=False,
             )
-            messages.success(request, "Your message has been sent successfully!")
+            messages.success(
+                request, "Your message has been sent successfully!")
             return redirect('contact')
     return render(request, 'contact.html', {'form': form})
