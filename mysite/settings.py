@@ -109,7 +109,7 @@ else:
     # PostgreSQL pour le développement et la production
     DATABASES = {
         'default': dj_database_url.config(
-            default='postgres://u13o8l34mi3nv2:pc6a399c096915def0d191bd397bb80397819a4844bfdd7e1be813615b1b3511c@c7u1tn6bvvsodf.cluster-czz5s0kz4scl.eu-west-1.rds.amazonaws.com:5432/d6fo0p414q4spq'
+            default=config('DATABASE_URL')
         )
     }
 
@@ -164,8 +164,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'studentinstitute2024@gmail.com'
-EMAIL_HOST_PASSWORD = 'fmve ttzx tcjx luec'  # Utilise un mot de passe d'application
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 DEFAULT_FROM_EMAIL = 'studentinstitute2024@gmail.com'
 
 
@@ -181,9 +181,7 @@ django_heroku.settings(locals())
 # Cloudinary -Django integration
 
 cloudinary.config(
-    cloud_name = "dbi9dhanq",
-    api_key = "778114457955977",
-    api_secret = "GytK3sofNmLZxc3ma8w8rZ-gTDk",
-
-
+    cloud_name = config('CLOUDINARY_CLOUD_NAME'),
+    api_key = config('CLOUDINARY_API_KEY'),
+    api_secret = config('CLOUDINARY_API_SECRET'),
 )
