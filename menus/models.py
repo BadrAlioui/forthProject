@@ -30,6 +30,6 @@ class Menu(models.Model):
 
     def __str__(self):
         """
-        Return a human-friendly string representation of the menu item.
+        Return a title of the menu item.
         """
         return self.title
