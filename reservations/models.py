@@ -20,17 +20,17 @@ class Reservation(models.Model):
         return f"You booked a table for {self.date_booking}"
 
     def clean(self):
-        # Assurez-vous que les noms sont en minuscule pour éviter les doublons
-        self.first_name = self.first_name.lower()
-        self.last_name = self.last_name.lower()
+            # Convertir la date_booking en date simple
+        booking_date = self.date_booking.date() if self.date_booking else None
 
-        # Vérifier les doublons en excluant l'instance actuelle
-        if Reservation.objects.filter(
-            first_name=self.first_name,
-            last_name=self.last_name,
-            date_booking=self.date_booking
+        # Vérifier les doublons en comparant uniquement la date
+        if booking_date and Reservation.objects.filter(
+            first_name=self.first_name.lower(),
+            last_name=self.last_name.lower(),
+            email=self.email,
+            date_booking__date=booking_date  
         ).exclude(pk=self.pk).exists():
-            raise ValidationError("You have already booked a table for this date!")
+            raise ValidationError("You have already booked a table for this day!")
 
         # Vérifier que number_of_persons est défini et valide
         if self.number_of_persons is None:
