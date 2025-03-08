@@ -1,12 +1,25 @@
+"""
+This module contains tests for the ContactForm.
+It uses Django's TestCase to ensure that the contact form behaves as expected when submitted.
+"""
+
 from django.test import TestCase
 from django.urls import reverse
 from mysite.forms import ContactForm
 
-
-#https://netninja.dev/courses/unit-testing-in-django/lectures/58314037
 class TestContactForm(TestCase):
-    def test_create_contact_form_when_submittind(self):
-        '''Test that the form is valid when submitting'''
+    """
+    Tests for the ContactForm submission process.
+    """
+
+    def test_create_contact_form_when_submitting(self):
+        """
+        Test that submitting the contact form with valid data redirects as expected.
+        
+        This test simulates a POST request to the 'contact' URL with valid form data.
+        It then checks that the response status code is 302 (redirect) and that the 
+        redirection is to the contact page.
+        """
         form_data = {
             'name': 'testuser',
             'email': 'test@test.com',
@@ -14,16 +27,6 @@ class TestContactForm(TestCase):
         }
         response = self.client.post(reverse('contact'), data=form_data)
 
-        # Check that the form is valid
+        # Check that the form submission resulted in a redirect
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, reverse('contact'))
-        
-
-
-    
-        
-
-        
-
-
-            
