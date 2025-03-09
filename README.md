@@ -279,6 +279,8 @@ You can access the user stories, organized by different levels of priority, here
 1. **Image Loading Issues**: Added Cloudinary to prevent images from disappearing after each deployment.
 2. **Reservation Past Date Bug**: Added validation to prevent users from making reservations for past dates.
 3. **CSS Issues**: Consolidated all CSS into `styles.css` to avoid confusion caused by inline styles.
+4. **Cloudinary Environment Variables Bug**: We encountered an issue on Heroku where the static files collection failed because the Cloudinary environment variables were missing. This was fixed by setting `CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY`, and `CLOUDINARY_API_SECRET` directly in the Heroku config using the `heroku config:set` command.
+
 
 ## Future Enhancements
 
