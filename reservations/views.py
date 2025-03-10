@@ -101,28 +101,30 @@ def edit(request, list_id):
     )
 
 
-@login_required(login_url="/accounts/login/")
-def delete_reservation(request):
-    """
-    Delete one or more reservations based on first and last name.
-    If the request is POST,
-    it retrieves the first_name and last_name from the POST data,
-    filters the reservations for the current user, and deletes them if found.
-    Displays appropriate success or error messages and
-    then redirects to the reservations list.
-    """
-    if request.method == "POST":
-        first_name = request.POST.get('first_name')
-        last_name = request.POST.get('last_name')
 
-        # Filter reservations by first and last name for the current user.
-        reservations = Reservation.objects.filter(
-            first_name=first_name, last_name=last_name, user=request.user
-        )
-        if reservations.exists():
-            reservations.delete()  # Deletes all matching reservations.
-            messages.success(request, "Reservation(s) deleted successfully")
-        else:
-            messages.error(request, "No matching reservations found.")
+@login_required(login_url="/accounts/login/")
+def delete_reservation(request, list_id):
+    """
+    Delete a specific reservation.
+
+    This view handles the deletion of a reservation identified by its primary key (list_id).
+    It ensures that the reservation belongs to the currently logged-in user. For GET requests,
+    it renders a confirmation template asking the user to confirm deletion. For POST requests,
+    it deletes the reservation, shows a success message, and redirects the user to the reservations list.
+
+    Args:
+        request: The HTTP request object.
+        list_id (int): The primary key of the reservation to be deleted.
+
+    Returns:
+        An HTTP redirect response upon successful deletion, or an HTTP response rendering the
+        deletion confirmation template if the request method is GET.
+    """
+    reservation = get_object_or_404(Reservation, pk=list_id, user=request.user)
+    if request.method == "POST":
+        reservation.delete()
+        messages.success(request, "Reservation deleted successfully")
         return redirect("reservations:liste")
-    return redirect("reservations:liste")
+    return render(request, "reservations/delete_confirmation.html", {"reservation": reservation})
+
+

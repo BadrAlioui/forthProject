@@ -71,7 +71,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                 <!-- Formulaire pour supprimer la réservation -->
-                <form method="POST" action="{% url 'reservations:delete' %}">
+                <form method="POST" action="{% url 'reservations:delete' get_reservation.pk %}">
                     {% csrf_token %}
                     <input type="hidden" name="first_name" value="{{ get_reservation.first_name }}">
                     <input type="hidden" name="last_name" value="{{ get_reservation.last_name }}">
