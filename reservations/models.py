@@ -1,6 +1,7 @@
 """
 This module defines the Reservation model for our restaurant booking system.
-It includes custom validation to ensure that users do not book more than one table
+It includes custom validation to ensure that
+users do not book more than one table
 on the same day and that all reservation details meet our requirements.
 """
 
@@ -19,9 +20,11 @@ class Reservation(models.Model):
         first_name (str): The first name of the person booking.
         last_name (str): The last name of the person booking.
         email (str): The email address of the person booking.
-        number_of_persons (int): The number of people included in the reservation.
+        number_of_persons (int): The number of people included
+        in the reservation.
         date_booking (datetime): The date and time of the reservation.
-    The unique_together constraint ensures that the same person (identified by last_name and email)
+    The unique_together constraint ensures that the same person
+    (identified by last_name and email)
     cannot book more than one reservation on the same day.
     """
     user = models.ForeignKey(
@@ -44,11 +47,13 @@ class Reservation(models.Model):
         """
         Clean and validate the Reservation instance.
 
-        This method normalizes the name and email fields to avoid issues with case or extra spaces.
+        This method normalizes the name and email fields to avoid issues
+        with case or extra spaces.
         It then checks:
             - That the user hasn't already booked a table on the same day.
             - That the number of persons is defined and greater than zero.
-            - That the total number of persons for the booking does not exceed the restaurant capacity.
+            - That the total number of persons for the booking does not
+            exceed the restaurant capacity.
             - That the booking date is not empty and is set in the future.
 
         Raises:
@@ -77,7 +82,7 @@ class Reservation(models.Model):
             raise ValidationError("The number of persons is required.")
         if self.number_of_persons <= 0:
             raise ValidationError({
-                'number_of_persons': "The number of persons must be greater than 0."
+                'number_of_persons': "The number must be greater than 0."
             })
 
         # Calculate the total persons already booked for this date.
@@ -96,5 +101,5 @@ class Reservation(models.Model):
             raise ValidationError("The booking date cannot be empty.")
         if self.date_booking < now():
             raise ValidationError({
-                'date_booking': "The date cannot be in the past."
+                'date_booking': "The date cannot be in the past or for today."
             })
