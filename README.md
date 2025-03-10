@@ -54,15 +54,6 @@ Django's authentication makes it easy to handle these features while keeping eve
 4. Start the Django server: `python manage.py runserver`
 
 ---
-## Code Style
-
-This project adheres to the [PEP8](https://www.python.org/dev/peps/pep-0008/) guidelines for Python code style. All Python files (e.g., `models.py`, `forms.py`, etc.) have been formatted accordingly.  
-We used [pep8ci](https://pep8ci.herokuapp.com/) to validate our code, and the following screenshots demonstrate the compliance:
-
-![PEP8CI Screenshot 1](/media/images/validator_reservation_test_view.png)
-![PEP8CI Screenshot 2](/media/images/validator_reservation_view.png)
-
----
 
 ## Screenshots
 
@@ -148,7 +139,7 @@ These messages are designed to enhance user experience by providing clear and im
 **CSS Validation**:
 
 -   All CSS files passed without errors:
-
+s
 -   css validator in styles.css:
 
 ![css validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/css_validator.png?raw=true)
@@ -157,57 +148,16 @@ These messages are designed to enhance user experience by providing clear and im
 
 ![Javascript validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/javascript_validator.png?raw=true)
 
-**Python Validation**:
+---
+## Code Style
 
-**_Reservation_**
+This project adheres to the [PEP8](https://www.python.org/dev/peps/pep-0008/) guidelines for Python code style. All Python files (e.g., `models.py`, `forms.py`, etc.) have been formatted accordingly.  
+We used [pep8ci](https://pep8ci.herokuapp.com/) to validate our code, and the following screenshots demonstrate the compliance:
 
--Reservation Views:
+![PEP8CI Screenshot 1](/media/images/validator_reservation_test_view.png)
+![PEP8CI Screenshot 2](/media/images/validator_reservation_view.png)
 
-![reservation_views validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/view_reservation.png?raw=true)
-
--Reservation Urls:
-
-![reservation_urls validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/reservation_urls.png?raw=true)
-
--Reservation Models:
-
-![reservation_urls validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/reservation_model.png?raw=true)
-
--Reservation Forms:
-
-![reservation_forms validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/reservation_form.png?raw=true)
-
-**_Mysite_**
-
--Mysite Views:
-
-![mysite_views validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/mysite_view.png?raw=true)
-
--Mysite Urls:
-
-![mysite_urls validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/mysite_urls.png?raw=true)
-
--Mysite Forms:
-
-![mysite_forms validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/mysite_forms.png?raw=true)
-
-**_Menu_**
-
--Menu Views:
-
-![menu_views validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/menu_views.png)
-
--Menu Forms:
-
-![menu_forms validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/menu_forms.png)
-
--Menu Urls:
-
-![menu_urls validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/menu_urls.png)
-
--Menu Models:
-
-![menu_models validator](https://github.com/BadrAlioui/forthProject/blob/master/media/images/menu_models.png)
+---
 
 ## Accessibility
 
