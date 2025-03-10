@@ -69,6 +69,30 @@ Here are some screenshots of the application:
 
 ![Contact Page](https://github.com/BadrAlioui/forthProject/blob/master/media/images/contact_presentation_page.png?raw=true)
 
+## Error and Success Messages
+
+Below are some screenshots showing the feedback messages displayed by our application:
+
+### Registration Error Message
+
+![Registration Error](https://github.com/BadrAlioui/forthProject/blob/master/media/images/no_reservation_past.png)
+
+- This error appears when a user submits an invalid registration form. It clearly informs the user about the mistake so they can correct it.
+
+### Reservation Success Message
+
+![Reservation Success](https://github.com/BadrAlioui/forthProject/blob/master/media/images/reservation_success.png?raw=true)
+
+- After a successful reservation, a confirmation message is shown, letting the user know that their booking has been successfully recorded.
+
+### Contact Form Error Message
+
+![Contact Form Error](https://github.com/BadrAlioui/forthProject/blob/master/media/images/contact_error.png?raw=true)
+
+- This screenshot displays the error message when the contact form submission fails due to invalid input.
+
+
+
 ## Validator Testing
 
 **HTML Validation (W3C Validator)**:
