@@ -9,6 +9,7 @@ from django.test import TestCase
 from django.utils.timezone import now, timedelta
 from reservations.forms import ReservationForm
 
+
 class ReservationFormTest(TestCase):
     """
     Test cases for the ReservationForm.
@@ -41,10 +42,11 @@ class ReservationFormTest(TestCase):
 
     def test_number_of_persons_invalid(self):
         """
-        Test that the form returns an error when the number of persons is invalid.
+        Test that the form returns an error
+        when the number of persons is invalid.
         """
         invalid_data = self.valid_data.copy()
-        invalid_data['number_of_persons'] = 0  # Invalid number
+        invalid_data['number_of_persons'] = 0
         form = ReservationForm(data=invalid_data)
         self.assertFalse(form.is_valid())
         self.assertIn('number_of_persons', form.errors)
@@ -55,10 +57,11 @@ class ReservationFormTest(TestCase):
 
     def test_date_booking_in_past(self):
         """
-        Test that the form returns an error when the booking date is in the past.
+        Test that the form returns an error
+        when the booking date is in the past.
         """
         invalid_data = self.valid_data.copy()
-        invalid_data['date_booking'] = now() - timedelta(days=1)  # Date in the past
+        invalid_data['date_booking'] = now() - timedelta(days=1)
         form = ReservationForm(data=invalid_data)
         self.assertFalse(form.is_valid())
         self.assertIn('date_booking', form.errors)

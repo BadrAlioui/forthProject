@@ -1,12 +1,15 @@
 """
-This module defines the Menu model for our restaurant application.
-It represents a menu item with details such as its title, description, slug, price,
+This module defines the Menu model
+for our restaurant application.
+It represents a menu item with details
+such as its title, description, slug, price,
 display date, and an associated image.
 """
 
 from django.db import models
 from django.core.validators import MinValueValidator
 from cloudinary.models import CloudinaryField
+
 
 class Menu(models.Model):
     """

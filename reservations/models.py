@@ -9,6 +9,7 @@ from django.utils.timezone import now
 from django.core.exceptions import ValidationError
 from django.contrib.auth.models import User
 
+
 class Reservation(models.Model):
     """
     Represents a table reservation at the restaurant.
@@ -20,7 +21,6 @@ class Reservation(models.Model):
         email (str): The email address of the person booking.
         number_of_persons (int): The number of people included in the reservation.
         date_booking (datetime): The date and time of the reservation.
-    
     The unique_together constraint ensures that the same person (identified by last_name and email)
     cannot book more than one reservation on the same day.
     """
@@ -32,7 +32,7 @@ class Reservation(models.Model):
     email = models.EmailField()
     number_of_persons = models.IntegerField()
     date_booking = models.DateTimeField()
-    
+
     class Meta:
         unique_together = ["last_name", "date_booking", "email"]
 
@@ -67,21 +67,25 @@ class Reservation(models.Model):
             first_name=self.first_name,
             last_name=self.last_name,
             email=self.email,
-            date_booking__date=booking_date  
+            date_booking__date=booking_date
         ).exclude(pk=self.pk).exists():
-            raise ValidationError("You have already booked a table for this day!")
-
+            raise ValidationError(
+                "You have already booked a table for this day!"
+            )
         # Check that number_of_persons is defined and valid.
         if self.number_of_persons is None:
             raise ValidationError("The number of persons is required.")
         if self.number_of_persons <= 0:
-            raise ValidationError({'number_of_persons': "The number of persons must be greater than 0."})
-
+            raise ValidationError({
+                'number_of_persons': "The number of persons must be greater than 0."
+            })
 
         # Calculate the total persons already booked for this date.
-        total_persons = Reservation.objects.filter(
-            date_booking=self.date_booking
-        ).exclude(pk=self.pk).aggregate(total=models.Sum('number_of_persons'))['total'] or 0
+        total_persons = (
+            Reservation.objects.filter(date_booking=self.date_booking)
+            .exclude(pk=self.pk)
+            .aggregate(total=models.Sum('number_of_persons'))
+        )['total'] or 0
 
         # Check that the restaurant capacity is not exceeded.
         if total_persons + self.number_of_persons > 15:
@@ -91,5 +95,6 @@ class Reservation(models.Model):
         if self.date_booking is None:
             raise ValidationError("The booking date cannot be empty.")
         if self.date_booking < now():
-            raise ValidationError({'date_booking': "The date cannot be in the past."})
-
+            raise ValidationError({
+                'date_booking': "The date cannot be in the past."
+            })

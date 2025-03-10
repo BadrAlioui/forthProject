@@ -30,7 +30,8 @@ class MenuFormTest(TestCase):
     """
     This TestCase checks the behavior of the Menu form.
     It ensures that the form creates a new Menu when provided with valid data,
-    and that it shows the proper error messages when required fields are missing.
+    and that it shows the proper error messages when required
+    fields are missing.
     """
 
     def test_menu_form_valid_data(self):
@@ -45,9 +46,9 @@ class MenuFormTest(TestCase):
             'price': 10.00,
             'image': image,
         }
-        admin_user = User.objects.create_superuser(username='admin', password='admin123')
+        admin_user = User.objects.create_superuser(username='admin',
+                                                   password='admin123')
         self.client.login(username='admin', password='admin123')
-        
         response = self.client.post(reverse('menus:create'), data=form_data)
 
         # Verify that the response is a redirect and that the Menu was created.
@@ -56,11 +57,13 @@ class MenuFormTest(TestCase):
 
     def test_menu_form_no_data(self):
         """
-        Test that submitting the Menu form without any data returns the form with errors,
+        Test that submitting the Menu form without any data
+        returns the form with errors,
         and no Menu instance is created.
         """
         # Create an admin user and log in.
-        admin_user = User.objects.create_superuser(username='admin', password='admin123')
+        admin_user = User.objects.create_superuser(username='admin',
+                                                   password='admin123')
         self.client.login(username='admin', password='admin123')
 
         # Submit an empty form.

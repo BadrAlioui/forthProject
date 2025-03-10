@@ -13,6 +13,7 @@ from django.contrib.auth.models import User
 from reservations.models import Reservation
 from django.utils.timezone import now, timedelta
 
+
 class ReservationModelTest(TestCase):
     """
     Test cases for the Reservation model.
@@ -22,12 +23,14 @@ class ReservationModelTest(TestCase):
         """
         Set up a test user and a default booking date for tomorrow.
         """
-        self.user = User.objects.create_user(username="testuser", password="testpass")
-        self.date_booking = now() + timedelta(days=1)  # Reservation for tomorrow
+        self.user = User.objects.create_user(username="testuser",
+                                             password="testpass")
+        self.date_booking = now() + timedelta(days=1)
 
     def test_reservation_creation(self):
         """
-        Test that a valid reservation is created successfully and that its string
+        Test that a valid reservation is created
+        successfully and that its string
         representation is correct.
         """
         reservation = Reservation.objects.create(
@@ -38,7 +41,8 @@ class ReservationModelTest(TestCase):
             number_of_persons=5,
             date_booking=self.date_booking,
         )
-        self.assertEqual(str(reservation), f"You booked a table for {reservation.date_booking}")
+        self.assertEqual(str(reservation),
+                         f"You booked a table for {reservation.date_booking}")
 
     def test_number_of_persons_validation(self):
         """
@@ -82,7 +86,8 @@ class ReservationModelTest(TestCase):
 
     def test_maximum_capacity(self):
         """
-        Test that exceeding the restaurant's maximum capacity for a given booking
+        Test that exceeding the restaurant's
+        maximum capacity for a given booking
         date raises a ValidationError.
         """
         Reservation.objects.create(
@@ -98,7 +103,7 @@ class ReservationModelTest(TestCase):
             first_name="bob",
             last_name="johnson",
             email="bob.johnson@example.com",
-            number_of_persons=6,  # This will exceed the capacity of 15
+            number_of_persons=6,
             date_booking=self.date_booking,
         )
         with self.assertRaises(ValidationError):

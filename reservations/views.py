@@ -10,11 +10,11 @@ from .forms import ReservationForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
+
 @login_required(login_url="/accounts/login/")
 def reservation_page(request):
     """
     Display the reservations of the logged-in user.
-    
     Retrieves all reservations associated with the current user and renders
     them using the 'reservations/reservations.html' template.
     """
@@ -24,14 +24,16 @@ def reservation_page(request):
         context={'reservations': reservations}
     )
 
+
 @login_required(login_url="/accounts/login/")
 def liste_reservation(request):
     """
     Handle reservation creation and display the list of reservations.
-    
     If the request is a POST, it validates and saves the reservation form,
-    associating it with the current user. It also shows success or error messages.
-    If the request is a GET, it displays an empty form along with the list of existing
+    associating it with the current user.
+    It also shows success or error messages.
+    If the request is a GET,
+    it displays an empty form along with the list of existing
     reservations for the current user.
     """
     if request.method == "POST":
@@ -58,15 +60,16 @@ def liste_reservation(request):
         }
     )
 
+
 @login_required(login_url="/accounts/login/")
 def edit(request, list_id):
     """
     Edit an existing reservation.
-    
     Retrieves the reservation using the provided list_id.
     Only allows the owner of the reservation to edit it.
     If the reservation is found and belongs to the user, it processes
-    the form submission to update the reservation; otherwise, it shows an error message.
+    the form submission to update the reservation; otherwise,
+    it shows an error message.
     """
     try:
         get_reservation = Reservation.objects.get(pk=list_id)
@@ -97,14 +100,16 @@ def edit(request, list_id):
         }
     )
 
+
 @login_required(login_url="/accounts/login/")
 def delete_reservation(request):
     """
     Delete one or more reservations based on first and last name.
-    
-    If the request is POST, it retrieves the first_name and last_name from the POST data,
+    If the request is POST,
+    it retrieves the first_name and last_name from the POST data,
     filters the reservations for the current user, and deletes them if found.
-    Displays appropriate success or error messages and then redirects to the reservations list.
+    Displays appropriate success or error messages and
+    then redirects to the reservations list.
     """
     if request.method == "POST":
         first_name = request.POST.get('first_name')

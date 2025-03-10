@@ -5,11 +5,13 @@ It collects the user's name, email, and message.
 
 from django import forms
 
+
 class ContactForm(forms.Form):
     """
     A simple contact form.
 
-    This form gathers a user's name, email, and message to be sent to the site administrators.
+    This form gathers a user's name, email,
+    and message to be sent to the site administrators.
     """
     name = forms.CharField(max_length=250)
     email = forms.EmailField()

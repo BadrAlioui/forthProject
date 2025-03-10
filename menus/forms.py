@@ -1,10 +1,14 @@
 """
-This module contains the form for creating or updating menu items.
-It uses Django's ModelForm to automatically generate form fields based on the Menu model.
+This module contains the form for creating or
+updating menu items.
+It uses Django's ModelForm to automatically
+generate form fields
+based on the Menu model.
 """
 
 from django.forms import ModelForm
 from .models import Menu
+
 
 class MenuForm(ModelForm):
     """
