@@ -243,15 +243,37 @@ The course [Unit Testing in Django](https://netninja.dev/courses/unit-testing-in
 
 ## Deployment
 
-The booking system is hosted on Heroku. To deploy your own version:
+The booking system is hosted on Heroku. To deploy your own version, follow these steps:
 
 #### Deploying a Django Project on Heroku
 
-Heroku is a cloud platform service that enables developers to build, run, and operate applications entirely in the cloud. Here is how to use it:
+Heroku is a cloud platform that lets you build, run, and operate applications entirely in the cloud. Here's how to deploy this project:
 
-1. Create an account or log in to Heroku.
-2. On the dashboard, click on **"New"** and select **"Create new app"**.
-3. Give the app a unique name and select the region closest to you. Then click **"Create app"** to confirm.
+1. **Create an account or log in to Heroku.**
+2. **Create a new app:**  
+   On the Heroku dashboard, click **"New"** and select **"Create new app"**.  
+   Give your app a unique name and select the region closest to you, then click **"Create app"**.
+3. **Set up environment variables:**  
+   For security and proper functioning of the application, you must set the following environment variables:
+   ```bash
+   heroku config:set SECRET_KEY="your_secret_key"
+   heroku config:set EMAIL_HOST_USER="your_email@example.com"
+   heroku config:set EMAIL_HOST_PASSWORD="your_email_password"
+   heroku config:set CLOUDINARY_CLOUD_NAME="your_cloud_name"
+   heroku config:set CLOUDINARY_API_KEY="your_api_key"
+   heroku config:set CLOUDINARY_API_SECRET="your_api_secret"```
+
+Your `requirements.txt` file must include essential packages for a successful deployment on Heroku, such as:
+
+- **Django**: The web framework.
+- **dj-database-url**: For easy database configuration.
+- **gunicorn**: The WSGI server recommended for Heroku.
+- **psycopg2** or **psycopg2-binary**: To work with PostgreSQL on Heroku.
+- **django-heroku**: For configuring Django with Heroku settings.
+- **whitenoise**: For efficient static file management.
+- **cloudinary**: (If used) For managing images.
+
+
 
 #### Settings
 
