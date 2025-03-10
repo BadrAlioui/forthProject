@@ -53,6 +53,17 @@ Django's authentication makes it easy to handle these features while keeping eve
 3. Install dependencies: `pip install -r requirements.txt`
 4. Start the Django server: `python manage.py runserver`
 
+---
+## Code Style
+
+This project adheres to the [PEP8](https://www.python.org/dev/peps/pep-0008/) guidelines for Python code style. All Python files (e.g., `models.py`, `forms.py`, etc.) have been formatted accordingly.  
+We used [pep8ci](https://pep8ci.herokuapp.com/) to validate our code, and the following screenshots demonstrate the compliance:
+
+![PEP8CI Screenshot 1](/media/images/validator_reservation_test_view.png)
+![PEP8CI Screenshot 2](/media/images/validator_reservation_view.png)
+
+---
+
 ## Screenshots
 
 Here are some screenshots of the application:
