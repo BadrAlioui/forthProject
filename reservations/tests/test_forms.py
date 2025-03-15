@@ -52,7 +52,7 @@ class ReservationFormTest(TestCase):
         self.assertIn('number_of_persons', form.errors)
         self.assertEqual(
             form.errors['number_of_persons'][0],
-            "The number of persons must be greater than 0."
+            "The number must be greater than 0."
         )
 
     def test_date_booking_in_past(self):
@@ -67,7 +67,7 @@ class ReservationFormTest(TestCase):
         self.assertIn('date_booking', form.errors)
         self.assertEqual(
             form.errors['date_booking'][0],
-            "The date cannot be in the past."
+            "The date cannot be in the past or for today."
         )
 
     def test_date_booking_empty(self):

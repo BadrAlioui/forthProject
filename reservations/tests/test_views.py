@@ -122,13 +122,12 @@ class ReservationViewsTest(TestCase):
         After deletion, the reservation should no longer exist.
         """
         response = self.client.post(
-            reverse("reservations:delete"),
+            reverse("reservations:delete", args=[self.reservation.id]),
             data={"first_name": "john", "last_name": "doe"}
         )
         self.assertEqual(response.status_code, 302)
-        self.assertFalse(
-            Reservation.objects.filter(pk=self.reservation.pk).exists()
-        )
+        self.assertFalse(Reservation.objects.filter(pk=self.reservation.pk).exists())
+
 
     def test_access_without_login(self):
         """
