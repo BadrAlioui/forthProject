@@ -1,5 +1,35 @@
 # Restaurant Booking System
 
+## Table of Contents
+- [About The Project](#about-the-project)
+- [Objectives](#objectives)
+- [Built With](#built-with)
+- [Key Features](#key-features)
+- [Authentication](#authentication)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Screenshots](#screenshots)
+  - [Reservation Page](#reservation-page)
+  - [Reservation List](#reservation-list)
+  - [Contact Page](#contact-page)
+- [Error and Success Messages](#error-and-success-messages)
+- [Validator Testing](#validator-testing)
+- [Code Style](#code-style)
+- [Accessibility](#accessibility)
+- [Manual Testing](#manual-testing)
+- [Automated Testing and Code Coverage](#automated-testing-and-code-coverage)
+- [Wireframes](#wireframes)
+- [Agile Sprints](#agile-sprints)
+- [Database Model](#database-model)
+- [Deployment](#deployment)
+- [User Stories](#user-stories)
+- [Bug Fixes](#bug-fixes)
+- [Future Enhancements](#future-enhancements)
+- [References](#references)
+- [Inspiration and Learning Resources](#inspiration-and-learning-resources)
+- [Acknowledgements](#acknowledgements)
+
 ![Home Page](https://github.com/BadrAlioui/forthProject/blob/master/media/images/home-page-presentation.png)
 
 ## About The Project
