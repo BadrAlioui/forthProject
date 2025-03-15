@@ -225,7 +225,7 @@ The database model has been designed using [drawSQL](https://drawsql.app/). The 
 
 The model supports essential user interactions: users can make reservations and have the ability to modify or delete them. Additionally, if a user is an administrator, they have the capability to create and manage the restaurant menu.
 
-[Database Model](/media/images/database_model.png)
+![Database Model](/media/images/database_model.png)
 
 ---
 
