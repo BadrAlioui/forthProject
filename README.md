@@ -219,6 +219,15 @@ Here are some screenshots from our agile sprints:
 
 
 ---
+## Database Model
+
+The database model has been designed using [drawSQL](https://drawsql.app/). The application utilizes a relational database architecture, with **SQLite3** used during development and **PostgreSQL** for deployment in production.
+
+The model supports essential user interactions: users can make reservations and have the ability to modify or delete them. Additionally, if a user is an administrator, they have the capability to create and manage the restaurant menu.
+
+[Database Model](/media/images/database_model.png)
+
+---
 
 ## Deployment
 
