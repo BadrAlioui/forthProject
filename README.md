@@ -212,10 +212,11 @@ The course [Unit Testing in Django](https://netninja.dev/courses/unit-testing-in
 
 Here are some screenshots from our agile sprints:
 
-![Sprint 1](https://github.com/BadrAlioui/forthProject/blob/master/media/images/sprint1.png?raw=true)
-![Sprint 2](https://github.com/BadrAlioui/forthProject/blob/master/media/images/sprint2.png?raw=true)
-![Sprint 3](https://github.com/BadrAlioui/forthProject/blob/master/media/images/sprint3.png?raw=true)
-![Sprint 4](https://github.com/BadrAlioui/forthProject/blob/master/media/images/sprint4.png?raw=true)
+![Sprint 1](/media/images/spring1.pngmedia/images/sprint1.png)
+![Sprint 2](/media/images/spring1.pngmedia/images/sprint2.png)
+![Sprint 3](/media/images/spring1.pngmedia/images/sprint3.png)
+![Sprint 4](/media/images/spring1.pngmedia/images/sprint4.png)
+
 
 ---
 
