@@ -164,6 +164,35 @@ main .black-transparent-article {
     h1 {
         font-size: 2rem;
     }
+    table thead {
+        display: none;
+    }
+    table, table tbody, table tr, table td, table th {
+        display: block;
+        width: 100%;
+    }
+    table tr {
+        margin-bottom: 15px;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 10px;
+    }
+    table td {
+        text-align: center;
+        padding-left: 50%;
+        position: relative;
+    }
+    table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 45%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+    .btn {
+        margin-top: 10px;
+    }
 }
 
 @media (min-width: 768px) {
