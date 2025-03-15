@@ -206,6 +206,19 @@ The course [Unit Testing in Django](https://netninja.dev/courses/unit-testing-in
 
 ![user flows](https://github.com/BadrAlioui/forthProject/blob/master/media/images/User-flow.png)
 
+---
+
+## Agile Sprints
+
+Here are some screenshots from our agile sprints:
+
+![Sprint 1](https://github.com/BadrAlioui/forthProject/blob/master/media/images/sprint1.png?raw=true)
+![Sprint 2](https://github.com/BadrAlioui/forthProject/blob/master/media/images/sprint2.png?raw=true)
+![Sprint 3](https://github.com/BadrAlioui/forthProject/blob/master/media/images/sprint3.png?raw=true)
+![Sprint 4](https://github.com/BadrAlioui/forthProject/blob/master/media/images/sprint4.png?raw=true)
+
+---
+
 ## Deployment
 
 The booking system is hosted on Heroku. To deploy your own version, follow these steps:
