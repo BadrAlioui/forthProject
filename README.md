@@ -228,6 +228,9 @@ Heroku is a cloud platform that lets you build, run, and operate applications en
    heroku config:set CLOUDINARY_API_KEY="your_api_key"
    heroku config:set CLOUDINARY_API_SECRET="your_api_secret"```
 
+**Important Security Note:**  
+Sensitive data is stored in a `.env` file, and a `.gitignore` file is used to ensure that this file is not pushed to GitHub. This approach keeps your credentials and other confidential information secure.
+
 Your `requirements.txt` file must include essential packages for a successful deployment on Heroku, such as:
 
 - **Django**: The web framework.
