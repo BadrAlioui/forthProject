@@ -1,4 +1,7 @@
-{% extends 'template_base.html' %} {% block content %}
+{% extends 'template_base.html' %}
+
+{% block content %}
+<!-- Home Page Content -->
 <div id="container" class="home-page h-100 text-center">
     <h1 class="display-3 text-white text-center">
         Let's <span class="text-primary">enjoy</span>.
@@ -8,6 +11,7 @@
         dishes that are carefully designed to bring you a truly satisfying
         Moroccan food experience that you are sure to remember.
     </p>
+    <!-- Button linking to the reservation page -->
     <p class="lead text-center mb-0 mt-sm-5">
         <a
             href="{% url 'reservations:reservations' %}"

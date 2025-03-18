@@ -1,26 +1,33 @@
-{% extends 'template_base.html' %} {% load widget_tweaks %} {% block content %}
+{% extends 'template_base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+<!-- Contact Page -->
 <div class="contact-page mb-5">
     <h1>Contact Us</h1>
+    <!-- Contact form that posts to the 'contact' URL -->
     <form action="{% url 'contact' %}" method="POST">
         {% csrf_token %}
+        <!-- Form group for name input -->
         <div class="form-group">
             <label for="id_name">Name:</label>
             {{ form.name }}
             <span class="error-message" id="nameError"></span>
         </div>
+        <!-- Form group for email input -->
         <div class="form-group">
             <label for="id_email">Email:</label>
             {{ form.email }}
             <span class="error-message" id="emailError"></span>
         </div>
+        <!-- Form group for message textarea -->
         <div class="form-group">
             <label for="id_message">Message:</label>
             {{ form.message|add_class:"text-area" }}
             <span class="error-message" id="messageError"></span>
         </div>
-        <button type="submit" class="btn btn-primary btn-lg w-100">
-            Submit
-        </button>
+        <!-- Submit button for the form -->
+        <button type="submit" class="btn btn-primary btn-lg w-100">Submit</button>
     </form>
 </div>
 {% endblock %}

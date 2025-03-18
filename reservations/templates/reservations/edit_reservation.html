@@ -1,14 +1,13 @@
-{% extends "template_base.html" %} 
-{% load static %} 
+{% extends "template_base.html" %}
+{% load static %}
 {% block content %}
-
-<!-- Formulaire de modification -->
+<!-- Reservation Edit Page -->
+<!-- Form for editing an existing reservation -->
 <form class="form1 mt-5" action="{% url 'reservations:edit' get_reservation.id %}" method="POST">
     {% csrf_token %}
     <div class="container">
         <h1 class="mx-auto mt-2">Edit Reservation</h1>
-
-        <!-- Affichage des erreurs -->
+        {# Display form errors if any #}
         {% if form.errors %}
         <div class="alert alert-danger">
             <ul>
@@ -18,8 +17,7 @@
             </ul>
         </div>
         {% endif %}
-
-        <!-- Détails de la réservation -->
+        <!-- Reservation details fields -->
         <div class="mb-3 mt-3">
             <label for="{{ form.first_name.id_for_label }}" class="form-label">First Name</label>
             {{ form.first_name }}
@@ -44,12 +42,10 @@
             <label for="{{ form.email.id_for_label }}" class="form-label">Email</label>
             {{ form.email }}
         </div>
-
-        <!-- Positionnement des boutons "Submit" et "Delete" -->
+        <!-- Buttons for submitting changes and triggering deletion modal -->
         <div class="d-flex justify-content-between mt-4">
             <button type="submit" class="btn btn-primary">Submit</button>
-
-            <!-- Bouton qui déclenche la fenêtre modale pour supprimer -->
+            <!-- Button to open deletion confirmation modal -->
             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
                 Delete Reservation
             </button>
@@ -57,20 +53,23 @@
     </div>
 </form>
 
-<!-- Fenêtre modale de confirmation -->
+<!-- Deletion Confirmation Modal -->
 <div id="deleteModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
+            <!-- Modal Header -->
             <div class="modal-header">
                 <h5 class="modal-title" id="deleteModalLabel">Confirm Deletion</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            <!-- Modal Body -->
             <div class="modal-body">
                 Are you sure you want to delete this reservation?
             </div>
+            <!-- Modal Footer with Cancel and Delete actions -->
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                <!-- Formulaire pour supprimer la réservation -->
+                <!-- Form to delete the reservation -->
                 <form method="POST" action="{% url 'reservations:delete' get_reservation.pk %}">
                     {% csrf_token %}
                     <input type="hidden" name="first_name" value="{{ get_reservation.first_name }}">
@@ -81,5 +80,4 @@
         </div>
     </div>
 </div>
-
 {% endblock %}
