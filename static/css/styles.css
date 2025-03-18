@@ -1,278 +1,313 @@
-/* Style global */
-html,
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    height: 100vh;
-    width: 100vw;
-    background-image: url('../images/couscous.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-.moroc-logo img {
-    height: 55px;
-    width: auto;
-    margin-top: -5px;
-}
-
-main {
-    flex-grow: 1;
-    margin: 0;
-    padding: 0;
-}
-
-main .black-transparent-article {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-main .white-smoke {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-#container {
-    background-color: rgba(0, 0, 0, 0.5);
-    margin-top: 30px;
-    margin-left: 50px;
-    width: 33%;
-}
-/* Navigation et pied de page */
-.navbar,
-footer {
-    background-color: rgba(0, 0, 0, 0.79);
-}
-
-.navbar-nav {
-    margin-left: auto !important;
-}
-
-footer {
-    flex-shrink: 0;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    text-align: center;
-    margin-top: 60px;
-}
-
-footer a {
-    margin-right: 15px;
-    color: white;
-    font-size: 1.5em;
-}
-
-/*icon*/
-
-.icon a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.icon a:hover {
-    color: #ddd;
-}
-
-/* Conteneur avec fond blanc semi-transparent pour toutes les pages */
-.content-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 15px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-    width: 90%;
-}
-
-/* Title */
-h1 {
-    color: #fff;
-    text-align: center;
-    font-size: 3em;
-    font-weight: bold;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    font-family: 'Dancing Script', cursive;
-}
-
-/* Formulaires globaux */
-
-form {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 30px;
-    border-radius: 15px;
-    max-width: 600px;
-    margin: 0 auto;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.form-control {
-    width: 100%;
-    padding: 10px;
-    font-size: 1em;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-.form1 {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 30px;
-    border-radius: 15px;
-    max-width: 600px;
-    margin: 0 auto;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-    margin-bottom: 45px;
-}
-
-main .menu-detail-page {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-main .black-transparent-article {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* error handling */
-
-.page-error {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-@media (max-width: 576px) {
-    h1 {
-        font-size: 2rem;
-    }
-    table thead {
-        display: none;
-    }
-    table, table tbody, table tr, table td, table th {
-        display: block;
-        width: 100%;
-    }
-    table tr {
-        margin-bottom: 15px;
-        border-bottom: 2px solid #ddd;
-        padding-bottom: 10px;
-    }
-    table td {
-        text-align: center;
-        padding-left: 50%;
-        position: relative;
-    }
-    table td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 0;
-        width: 45%;
-        padding-left: 10px;
-        font-weight: bold;
-        text-align: left;
-    }
-    .btn {
-        margin-top: 10px;
-    }
-}
-
-@media (min-width: 768px) {
-    h1 {
-        font-size: 3rem;
-    }
-    #container {
-        margin-right: 50px;
-        width: 33%;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        padding: 0;
-    }
-    #container {
-        margin: 30px auto;
-        width: 85%;
-    }
-
-    /* Les boutons doivent aussi être contenus dans le cadre */
-    button {
-        margin-top: 20px;
-        width: 100%;
-        padding: 10px;
-        font-size: 1em;
-        background-color: #007bff;
-        border: none;
-        color: white;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background-color: #0056b3;
-    }
-
-    /* Page des réservations */
-    .reservations-page .content-container {
-        max-width: 600px;
-        background-color: rgba(255, 255, 255, 0.8);
-        padding: 20px;
-        border-radius: 15px;
-        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-        width: 90%;
-    }
-
-    .reservations-page h1 {
-        color: #fff;
-    }
-
-    .reservations-page .form-control {
-        padding: 10px;
-        font-size: 1em;
-        border-radius: 5px;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    /* Ajout pour la réactivité sur la page de réservation */
-    @media screen and (max-width: 576px) {
-        .reservations-page .content-container {
-            padding: 10px;
-            max-width: 100%;
-        }
-
-        .reservations-page h1 {
-            font-size: 2rem;
-        }
-
-        form {
-            padding: 20px;
-            max-width: 100%;
-        }
-    }
-
-    @media (min-width: 1440px) {
-        .reservations-page .content-container {
-            max-width: 50%;
-        }
-    }
-}
+/* ===============================
+   Global Styles
+   =============================== */
+   html,
+   body {
+       margin: 0;
+       padding: 0;
+       font-family: 'Roboto', sans-serif;
+       height: 100vh;
+       width: 100vw;
+       /* Set background image with settings to cover the entire page */
+       background-image: url('../images/couscous.jpg');
+       background-repeat: no-repeat;
+       background-attachment: fixed;
+       background-size: cover;
+       background-position: center;
+       overflow-x: hidden;
+       display: flex;
+       flex-direction: column;
+   }
+   
+   /* Style for the logo in the navbar */
+   .moroc-logo img {
+       height: 55px;
+       width: auto;
+       margin-top: -5px;
+   }
+   
+   /* Main content area styling */
+   main {
+       flex-grow: 1;
+       margin: 0;
+       padding: 0;
+   }
+   
+   /* Semi-transparent background for certain articles in the main section */
+   main .black-transparent-article {
+       background-color: rgba(0, 0, 0, 0.8);
+   }
+   
+   main .white-smoke {
+       background-color: rgba(0, 0, 0, 0.5);
+   }
+   
+   /* Specific container for the homepage with semi-transparent background */
+   #container {
+       background-color: rgba(0, 0, 0, 0.5);
+       margin-top: 30px;
+       margin-left: 50px;
+       width: 33%;
+   }
+   
+   /* ===============================
+      Navigation and Footer
+      =============================== */
+   .navbar,
+   footer {
+       /* Semi-transparent background for navbar and footer */
+       background-color: rgba(0, 0, 0, 0.79);
+   }
+   
+   .navbar-nav {
+       margin-left: auto !important;
+   }
+   
+   footer {
+       flex-shrink: 0;
+       padding: 20px;
+       /* Footer background with transparency */
+       background-color: rgba(0, 0, 0, 0.5);
+       color: white;
+       text-align: center;
+       margin-top: 60px;
+   }
+   
+   footer a {
+       margin-right: 15px;
+       color: white;
+       font-size: 1.5em;
+   }
+   
+   /* ===============================
+      Icon Styles
+      =============================== */
+   .icon a {
+       text-decoration: none;
+       color: inherit;
+   }
+   
+   .icon a:hover {
+       color: #ddd;
+   }
+   
+   /* ===============================
+      Main Content Container (semi-transparent white background)
+      =============================== */
+   .content-container {
+       max-width: 1200px;
+       margin: 0 auto;
+       padding: 20px;
+       background-color: rgba(255, 255, 255, 0.8);
+       border-radius: 15px;
+       box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+       width: 90%;
+   }
+   
+   /* ===============================
+      Title Styles (h1)
+      =============================== */
+   h1 {
+       color: #fff;
+       text-align: center;
+       font-size: 3em;
+       font-weight: bold;
+       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+       font-family: 'Dancing Script', cursive;
+   }
+   
+   /* ===============================
+      Global Form Styles
+      =============================== */
+   form {
+       background-color: rgba(255, 255, 255, 0.8);
+       padding: 30px;
+       border-radius: 15px;
+       max-width: 600px;
+       margin: 0 auto;
+       box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+       display: flex;
+       flex-direction: column;
+       gap: 15px;
+       width: 100%;
+       box-sizing: border-box;
+   }
+   
+   .form-group {
+       margin-bottom: 15px;
+   }
+   
+   .form-group label {
+       display: block;
+       font-weight: bold;
+       margin-bottom: 5px;
+   }
+   
+   .form-control {
+       width: 100%;
+       padding: 10px;
+       font-size: 1em;
+       border-radius: 5px;
+       border: 1px solid #ccc;
+       box-sizing: border-box;
+   }
+   
+   /* Specific style for form with class .form1 */
+   .form1 {
+       background-color: rgba(255, 255, 255, 0.8);
+       padding: 30px;
+       border-radius: 15px;
+       max-width: 600px;
+       margin: 0 auto;
+       box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+       margin-bottom: 45px;
+   }
+   
+   /* ===============================
+      Specific styles for menu pages and details
+      =============================== */
+   main .menu-detail-page {
+       background-color: rgba(0, 0, 0, 0.5);
+   }
+   
+   main .black-transparent-article {
+       background-color: rgba(0, 0, 0, 0.8);
+   }
+   
+   /* ===============================
+      Error handling styles
+      =============================== */
+   .page-error {
+       display: flex;
+       justify-content: center;
+       text-align: center;
+   }
+   
+   /* ===============================
+      Responsive Media Queries
+      =============================== */
+   
+   /* Adjustments for very small screens (max-width: 576px) */
+   @media (max-width: 576px) {
+       h1 {
+           font-size: 2rem;
+       }
+       /* Hide table header to simplify view */
+       table thead {
+           display: none;
+       }
+       /* Make table elements display as blocks for better mobile view */
+       table, table tbody, table tr, table td, table th {
+           display: block;
+           width: 100%;
+       }
+       table tr {
+           margin-bottom: 15px;
+           border-bottom: 2px solid #ddd;
+           padding-bottom: 10px;
+       }
+       /* Add labels before each table cell using the data-label attribute */
+       table td {
+           text-align: center;
+           padding-left: 50%;
+           position: relative;
+       }
+       table td::before {
+           content: attr(data-label);
+           position: absolute;
+           left: 0;
+           width: 45%;
+           padding-left: 10px;
+           font-weight: bold;
+           text-align: left;
+       }
+       .btn {
+           margin-top: 10px;
+       }
+   }
+   
+   /* Adjustments for medium screens (min-width: 768px) */
+   @media (min-width: 768px) {
+       h1 {
+           font-size: 3rem;
+       }
+       #container {
+           margin-right: 50px;
+           width: 33%;
+       }
+   }
+   
+   /* Adjustments for screens between 576px and 768px */
+   @media (max-width: 768px) {
+       .navbar {
+           padding: 0;
+       }
+       #container {
+           margin: 30px auto;
+           width: 85%;
+       }
+   
+       /* Adjust buttons to fit the container */
+       button {
+           margin-top: 20px;
+           width: 100%;
+           padding: 10px;
+           font-size: 1em;
+           background-color: #007bff;
+           border: none;
+           color: white;
+           border-radius: 5px;
+           cursor: pointer;
+       }
+   
+       button:hover {
+           background-color: #0056b3;
+       }
+   
+       /* Adjustments for the reservations page */
+       .reservations-page .content-container {
+           max-width: 600px;
+           background-color: rgba(255, 255, 255, 0.8);
+           padding: 20px;
+           border-radius: 15px;
+           box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+           width: 90%;
+       }
+   
+       .reservations-page h1 {
+           color: #fff;
+       }
+   
+       .reservations-page .form-control {
+           padding: 10px;
+           font-size: 1em;
+           border-radius: 5px;
+           width: 100%;
+           box-sizing: border-box;
+       }
+   
+       /* Specific adjustments for very small screens (max-width: 576px) on the reservations page */
+       @media screen and (max-width: 576px) {
+           .reservations-page .content-container {
+               padding: 10px;
+               max-width: 100%;
+           }
+   
+           .reservations-page h1 {
+               font-size: 2rem;
+           }
+   
+           form {
+               padding: 20px;
+               max-width: 100%;
+           }
+       }
+   
+       /* Adjustment for very large screens */
+       @media (min-width: 1440px) {
+           .reservations-page .content-container {
+               max-width: 50%;
+           }
+       }
+   }
+   
