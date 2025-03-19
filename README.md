@@ -281,6 +281,19 @@ The booking system is hosted on Heroku. To deploy your own version, follow these
 
 #### Deploying a Django Project on Heroku
 
+## Tools & Deployment Process
+
+This project is managed and deployed using a combination of modern tools and services:
+
+- **Git Bash & Visual Studio Code:**  
+  We use Git Bash for executing Git commands and Visual Studio Code for code editing. All changes are committed using Git Bash and then pushed to GitHub via Visual Studio Code’s integrated Git features.
+
+- **GitHub:**  
+  The project repository is hosted on GitHub, providing version control and collaborative development features.
+
+- **Cloudinary:**  
+  All images used in the project are stored and served through Cloudinary, ensuring fast and optimized delivery of media assets.
+
 Heroku is a cloud platform that lets you build, run, and operate applications entirely in the cloud. Here's how to deploy this project:
 
 1. **Create an account or log in to Heroku.**
@@ -300,7 +313,7 @@ Heroku is a cloud platform that lets you build, run, and operate applications en
 **Important Security Note:**  
 Sensitive data is stored in a `.env` file, and a `.gitignore` file is used to ensure that this file is not pushed to GitHub. This approach keeps your credentials and other confidential information secure.
 
-Your `requirements.txt` file must include essential packages for a successful deployment on Heroku, such as:
+4. Your `requirements.txt` file must include essential packages for a successful deployment on Heroku, such as:
 
 - **Django**: The web framework.
 - **dj-database-url**: For easy database configuration.
@@ -310,6 +323,32 @@ Your `requirements.txt` file must include essential packages for a successful de
 - **whitenoise**: For efficient static file management.
 - **cloudinary**: (If used) For managing images.
 
+5. Create a Procfile in the root directory with the following content:
+
+```Procfile
+web: gunicorn your_project_name.wsgi:application```
+
+6. Deploy your application:
+
+- Push your code to GitHub.
+- Use the Heroku CLI to push your repository to Heroku:
+
+```bash
+git push heroku main```
+
+7. After pushing your code to Heroku, it is essential to run the following post-deployment steps to ensure your application functions correctly:
+
+1. **Apply Migrations:**  
+   This updates your database schema with the latest changes from your Django models.
+   
+   ```bash
+   heroku run python manage.py migrate```
+
+**Collect Static Files:**  
+This gathers all static files (such as CSS, JavaScript, and images) into a single directory, which Heroku will serve efficiently.
+
+```bash
+heroku run python manage.py collectstatic --noinput```
 
 
 #### Settings
