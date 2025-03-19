@@ -326,7 +326,8 @@ Sensitive data is stored in a `.env` file, and a `.gitignore` file is used to en
 5. Create a Procfile in the root directory with the following content:
 
 ```Procfile
-web: gunicorn your_project_name.wsgi:application```
+web: gunicorn your_project_name.wsgi:application
+```
 
 6. Deploy your application:
 
@@ -334,21 +335,25 @@ web: gunicorn your_project_name.wsgi:application```
 - Use the Heroku CLI to push your repository to Heroku:
 
 ```bash
-git push heroku main```
+git push heroku main
+```
 
 7. After pushing your code to Heroku, it is essential to run the following post-deployment steps to ensure your application functions correctly:
 
-1. **Apply Migrations:**  
-   This updates your database schema with the latest changes from your Django models.
-   
-   ```bash
-   heroku run python manage.py migrate```
+   1. **Apply Migrations:**  
+      This updates your database schema with the latest changes from your Django models.
+      
+      ```bash
+      heroku run python manage.py migrate
+      ```
 
-**Collect Static Files:**  
-This gathers all static files (such as CSS, JavaScript, and images) into a single directory, which Heroku will serve efficiently.
+   2. **Collect Static Files:**  
+      This gathers all static files (such as CSS, JavaScript, and images) into a single directory, which Heroku will serve efficiently.
+      
+      ```bash
+      heroku run python manage.py collectstatic --noinput
+      ```
 
-```bash
-heroku run python manage.py collectstatic --noinput```
 
 
 #### Settings
@@ -426,5 +431,5 @@ You can access the user stories, organized by different levels of priority, here
 
 ## Acknowledgements
 
--   My Mentor Rahul for his ongoing support and feedback
+-   My Mentor Marcel for his ongoing support and feedback
 -   The Code Institute's Tutor Support with Marco
