@@ -21,6 +21,7 @@
 - [Automated Testing and Code Coverage](#automated-testing-and-code-coverage)
 - [Wireframes](#wireframes)
 - [Agile Sprints](#agile-sprints)
+  -[Agile & Kanban Process](#agile--kanban-process)
 - [Database Model](#database-model)
 - [Deployment](#deployment)
 - [User Stories](#user-stories)
@@ -246,6 +247,21 @@ Here are some screenshots from our agile sprints:
 ![Sprint 2](/media/images/spring2.png)
 ![Sprint 3](/media/images/spring3.png)
 ![Sprint 4](/media/images/spring4.png)
+
+### Agile & Kanban Process
+
+To better manage our project, we've implemented a structured Agile and Kanban workflow. Our board uses clear labels to prioritize tasks:
+
+- **Must Do:** Critical tasks that must be completed.
+- **High Priority:** Tasks that are critical and need immediate attention.
+- **Medium Priority:** Tasks that are important but not urgent.
+- **Low Priority:** Tasks that can be addressed later.
+- **Should Do:** Tasks that are planned and expected to be completed in the current sprint.
+- **Could Do:** Tasks that are optional and may be addressed if time allows.
+
+Below is a snapshot of our Kanban board displaying these labels:
+
+![Kanban Board](/media/images/label.png)
 
 
 ---
